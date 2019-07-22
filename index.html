@@ -4,12 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Parwesh</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet" />
 	
 <style>
 	/* Style the video: 100% width and height to cover the entire window */
 	#reel {
 		position: fixed;
-		right: 0;
+		left: 0;
 		bottom: 0;
 		min-width: 100%;
 		min-height: 100%;
@@ -18,15 +19,25 @@
 	/* Add some content at the bottom of the video/page */
 	.content {
 		position: fixed;
+		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, 0.5);
+		min-width: 100%;
+		min-height: 100%;
+		background: rgba(0, 0, 0, 0.2);
 		color: #f1f1f1;
 		width: 100%;
 		padding: 20px;
 	}
 	
+	.content h1 {
+		text-align: left;
+		padding-left: 100px;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		font-size: 48px;
+	}
+	
 	/* Style the button used to pause/play the video */
-	#myBtn {
+	#ppBtn {
 		width: 200px;
 		font-size: 18px;
 		padding: 10px;
@@ -36,7 +47,7 @@
 		cursor: pointer;
 	}
 	
-	#myBtn:hover {
+	#ppBtn:hover {
 		background: #ddd;
 		color: black;
 	}
@@ -54,9 +65,10 @@
 	
 <!-- Overlay text -->
 <div class="content">
-	<h1>DIY Animator Artist Hacker Engineer</h1>
+	<h1>DIY<br>Animator<br>Artist<br>Hacker<br>Engineer</h1>
 	<!-- Button to Play/Pause video with JavaScript -->
-	<button id="myBtn" onclick="myFunction()">Pause</button>
+	<button id="ppBtn" onclick="myFunction()">Pause</button>
+	<h3><a href="https://bitbucket.org/%7B43595313-b9fd-4a6b-a5a8-9b099b26520e%7D/">Git</a></h3>
 </div>
 	
 <script>
@@ -64,7 +76,7 @@
 var video = document.getElementById("reel");
 	
 // Get the button
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("ppBtn");
 	
 // Pause and play the video, and change button text
 function myFunction() {
@@ -80,6 +92,5 @@ function myFunction() {
 	}
 }
 </script>
-
 </body>
 </html>
