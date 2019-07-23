@@ -11,11 +11,11 @@
 	/* Style the video: 100% width and height to cover the entire window */
 	
 	body {
-		overflow-y: scroll;
+		/*overflow-y: scroll;*/
 	}
 	#reel {
 		overflow: hidden;
-		position: absolute;
+		position: fixed;
 		left: 0;
 		bottom: 0;
 		min-width: 100%;
@@ -25,6 +25,7 @@
 	
 	/* Add some content at the bottom of the video/page */
 	.content {
+		overflow: hidden;
 		display: block;
 		position: absolute;
 		right: 0;
@@ -42,14 +43,15 @@
 		position: relative;
 		top: 600px;
 		left: 100px;
-		background-color: rgba(0,0,0,0.90);
-		width: 450px;
+		background-color: rgba(0,0,0,1.00);
+		width: 300px;
 		padding: 10px;
+		padding-left: 20px;
 		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 		font-size: 48px;
 	}
 	
-	#diy {
+	.content h1:first-line {
 		font-size: 72px;
 	}
 	
@@ -69,11 +71,6 @@
 		background: #ddd;
 		color: black;
 	}
-	
-	#about {
-		position: relative;
-		top: 1000px;
-	}
 </style>
 </head>
 
@@ -81,15 +78,15 @@
 	
 <header id="header">
 	<div class="logonav">
-		<a href="index.html"><img src="images/ICON3-transparent-cropped.png" width="246" height="246" alt="Kumquat Ninja" /></a>
+		<a href="index.html"><img src="images/ICON3-transparent-cropped.png" alt="Kumquat Ninja" /></a>
 	</div>
 	<div id="navhead">
 		<h1>Parwesh Rallapalli</h1>
 		<nav>
 		<ul>
-			<li><a href="#about">About Me</a></li>
+			<li><a href="about.html">About Me</a></li>
 			<li><a href="art.html">Art</a></li>
-			<li><a href="">Code</a></li>
+			<li><a href="https://github.com/kumquatninja">Git</a></li>
 			<li><a href="journal.html">Journal</a></li>
 		</ul>
 		</nav>
@@ -103,14 +100,8 @@
 	
 <!-- Overlay -->
 <div class="content">
-	<tr>
-		<td>
-			<h1 id="diy">DIY</h1>
-	  </td>
-		<td class="description">
-			<h1>Animator<br>Artist<br>Hacker<br>Engineer</h1>
-		</td>
-  </tr>
+	<h1>DIY<br>animator<br>artist<br>developer<br>engineer</h1>
+	
 	<!-- Button to Play/Pause video with JavaScript -->
 	<button id="ppBtn" onclick="myFunction()">Pause</button>
 	<h3><a href="https://bitbucket.org/%7B43595313-b9fd-4a6b-a5a8-9b099b26520e%7D/">Git</a></h3>
