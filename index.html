@@ -5,35 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Parwesh</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 	
 <style>
+	#header img {
+		-webkit-filter: drop-shadow(5px 5px 8px #222);
+    	filter:         drop-shadow(5px 5px 8px #222); 
+		float: left;
+		position: relative;
+		top: 0px;
+		left: 100px;
+		z-index: 1;
+	}
 	/* Style the video: 100% width and height to cover the entire window */
 	#reel {
+		overflow: hidden;
 		position: fixed;
 		left: 0;
 		bottom: 0;
 		min-width: 100%;
 		min-height: 100%;
+		z-index: -1;
 	}
 	
 	/* Add some content at the bottom of the video/page */
 	.content {
+		display: block;
 		position: fixed;
 		right: 0;
 		bottom: 0;
 		min-width: 100%;
 		min-height: 100%;
-		background: rgba(0, 0, 0, 0.2);
+		background: rgba(0,0,0,0.2);
 		color: #f1f1f1;
 		width: 100%;
 		padding: 20px;
 	}
 	
+	td.description {
+		margin: 0px;
+	}
+	
 	.content h1 {
 		text-align: left;
-		padding-left: 100px;
+		position: relative;
+		top: 600px;
+		left: 100px;
+		background-color: black;
+		width: 300px;
+		padding: 10px;
 		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 		font-size: 48px;
+	}
+	
+	.content h1:first-line {
+		font-size: 72px;
 	}
 	
 	/* Style the button used to pause/play the video */
@@ -55,17 +81,40 @@
 </head>
 
 <body>
-
-<header><h1>Kumquat Ninja</h1></header>
-
+	
+<header id="header">
+	<div class="logonav">
+		<img src="images/ICON3-transparent-cropped.png" width="246" height="246" alt="Kumquat Ninja" />
+	</div>
+	<div id="navhead">
+		<h1>KUMQUATNINJA</h1>
+		<nav>
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../about.html">About Me</a></li>
+			<li><a href="../art.html">Art</a></li>
+			<li><a href="">Code</a></li>
+			<li><a href="../journal.html">Journal</a></li>
+		</ul>
+		</nav>
+	</div>
+</header>
+	
 <!-- The video -->
 <video autoplay muted loop id="reel">
 	<source src="reel1.mp4" type="video/mp4" />
 </video>
 	
-<!-- Overlay text -->
+<!-- Overlay -->
 <div class="content">
-	<h1>DIY<br>Animator<br>Artist<br>Hacker<br>Engineer</h1>
+	<tr>
+		<td>
+			<!--<img src="images/ICON3-transparent-cropped.png" width="492" height="492" alt="Kumquat Ninja"/>-->
+	  </td>
+		<td class="description">
+			<h1>DIY<br>Animator<br>Artist<br>Hacker<br>Engineer</h1>
+		</td>
+  </tr>
 	<!-- Button to Play/Pause video with JavaScript -->
 	<button id="ppBtn" onclick="myFunction()">Pause</button>
 	<h3><a href="https://bitbucket.org/%7B43595313-b9fd-4a6b-a5a8-9b099b26520e%7D/">Git</a></h3>
@@ -92,5 +141,6 @@ function myFunction() {
 	}
 }
 </script>
+
 </body>
 </html>
