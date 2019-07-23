@@ -40,8 +40,8 @@
 	
 	.content h1 {
 		text-align: left;
-		position: relative;
-		top: 600px;
+		position: fixed;
+		top: 50%;
 		left: 100px;
 		background-color: rgba(0,0,0,1.00);
 		width: 300px;
@@ -52,11 +52,15 @@
 	}
 	
 	.content h1:first-line {
+		text-align: center;
+		letter-spacing: 1em;
 		font-size: 72px;
 	}
 	
 	/* Style the button used to pause/play the video */
 	#ppBtn {
+		position: fixed;
+		top: 95%;
 		width: 200px;
 		font-size: 18px;
 		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -86,7 +90,7 @@
 		<ul>
 			<li><a href="about.html">About Me</a></li>
 			<li><a href="art.html">Art</a></li>
-			<li><a href="https://github.com/kumquatninja">Git</a></li>
+			<li><a href="https://github.com/kumquatninja" target="_blank">Git</a></li>
 			<li><a href="journal.html">Journal</a></li>
 		</ul>
 		</nav>
