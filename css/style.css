@@ -1,9 +1,22 @@
 @charset "utf-8";
 
+#header img {
+	-webkit-filter: drop-shadow(5px 5px 8px #222);
+	filter:         drop-shadow(5px 5px 8px #222); 
+	float: left;
+	position: relative;
+	top: 0px;
+	left: 100px;
+	z-index: 1;
+}
+
 #navhead {
-	display: none;
+	display: default;
+	position: relative;
+	right: 200px;
+	top: 50px;
 	color: white;
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	text-align: left auto;
-	font-size: 300%;
+	text-align: right;
+	z-index: 1;
 }

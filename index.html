@@ -8,19 +8,14 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 	
 <style>
-	#header img {
-		-webkit-filter: drop-shadow(5px 5px 8px #222);
-    	filter:         drop-shadow(5px 5px 8px #222); 
-		float: left;
-		position: relative;
-		top: 0px;
-		left: 100px;
-		z-index: 1;
-	}
 	/* Style the video: 100% width and height to cover the entire window */
+	
+	body {
+		overflow-y: scroll;
+	}
 	#reel {
 		overflow: hidden;
-		position: fixed;
+		position: absolute;
 		left: 0;
 		bottom: 0;
 		min-width: 100%;
@@ -31,7 +26,7 @@
 	/* Add some content at the bottom of the video/page */
 	.content {
 		display: block;
-		position: fixed;
+		position: absolute;
 		right: 0;
 		bottom: 0;
 		min-width: 100%;
@@ -42,23 +37,19 @@
 		padding: 20px;
 	}
 	
-	td.description {
-		margin: 0px;
-	}
-	
 	.content h1 {
 		text-align: left;
 		position: relative;
 		top: 600px;
 		left: 100px;
-		background-color: black;
-		width: 300px;
+		background-color: rgba(0,0,0,0.90);
+		width: 450px;
 		padding: 10px;
 		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 		font-size: 48px;
 	}
 	
-	.content h1:first-line {
+	#diy {
 		font-size: 72px;
 	}
 	
@@ -66,6 +57,7 @@
 	#ppBtn {
 		width: 200px;
 		font-size: 18px;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 		padding: 10px;
 		border: none;
 		background: #000;
@@ -77,6 +69,11 @@
 		background: #ddd;
 		color: black;
 	}
+	
+	#about {
+		position: relative;
+		top: 1000px;
+	}
 </style>
 </head>
 
@@ -84,17 +81,16 @@
 	
 <header id="header">
 	<div class="logonav">
-		<img src="images/ICON3-transparent-cropped.png" width="246" height="246" alt="Kumquat Ninja" />
+		<a href="index.html"><img src="images/ICON3-transparent-cropped.png" width="246" height="246" alt="Kumquat Ninja" /></a>
 	</div>
 	<div id="navhead">
-		<h1>KUMQUATNINJA</h1>
+		<h1>Parwesh Rallapalli</h1>
 		<nav>
 		<ul>
-			<li><a href="../index.html">Home</a></li>
-			<li><a href="../about.html">About Me</a></li>
-			<li><a href="../art.html">Art</a></li>
+			<li><a href="#about">About Me</a></li>
+			<li><a href="art.html">Art</a></li>
 			<li><a href="">Code</a></li>
-			<li><a href="../journal.html">Journal</a></li>
+			<li><a href="journal.html">Journal</a></li>
 		</ul>
 		</nav>
 	</div>
@@ -102,22 +98,27 @@
 	
 <!-- The video -->
 <video autoplay muted loop id="reel">
-	<source src="reel1.mp4" type="video/mp4" />
+	<source src="reel2_small.mp4" type="video/mp4" />
 </video>
 	
 <!-- Overlay -->
 <div class="content">
 	<tr>
 		<td>
-			<!--<img src="images/ICON3-transparent-cropped.png" width="492" height="492" alt="Kumquat Ninja"/>-->
+			<h1 id="diy">DIY</h1>
 	  </td>
 		<td class="description">
-			<h1>DIY<br>Animator<br>Artist<br>Hacker<br>Engineer</h1>
+			<h1>Animator<br>Artist<br>Hacker<br>Engineer</h1>
 		</td>
   </tr>
 	<!-- Button to Play/Pause video with JavaScript -->
 	<button id="ppBtn" onclick="myFunction()">Pause</button>
 	<h3><a href="https://bitbucket.org/%7B43595313-b9fd-4a6b-a5a8-9b099b26520e%7D/">Git</a></h3>
+</div>
+
+<div id="about">
+	<h1>About Me</h1>
+	<p>This is the content for Layout P Tag</p>
 </div>
 	
 <script>
