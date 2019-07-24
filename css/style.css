@@ -4,34 +4,38 @@
 	-webkit-filter: drop-shadow(5px 5px 8px #222);
 	filter:         drop-shadow(5px 5px 8px #222); 
 	float: left;
+	top: 50px;
 	left: 5%;
 	position: relative;
+	display: block;
 	height: 256px;
 	width: 256px;
 	z-index: 1;
 }
 
-#navhead {
+.vertical-menu {
 	display: default;
 	position: relative;
 	float: right;
 	right: 10%;
-	top: 10%;
+	top: 40px;
 	color: white;
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	text-align: left;
 	z-index: 1;
 }
-#navhead ul{
-	list-style-type: none;
-}
 
-#navhead ul li {
-	 display: block;
-  	color: black;
-  	text-align: center;
+.vertical-menu a {
+	display: block;
+  	color: rgba(29,29,29,1.00);
+	text-align: right;
   	padding: 14px 16px;
   	text-decoration: none;
+	font-size: 32px;
+}
+
+.vertical-menu a:hover {
+	color: white;
 }
 
 #about {
@@ -46,5 +50,14 @@
 	#header img {
 		height: 40%;
 		width: 40%;
+	}
+	
+	#header h1 {
+		display: none;
+	}
+	
+	.vertical-menu a {
+		font-size: 100%;
+		line-height: 20px;
 	}
 }
