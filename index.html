@@ -17,7 +17,7 @@
 		overflow: hidden;
 		position: fixed;
 		left: 0;
-		bottom: 0;
+		/*bottom: 0;*/ top: 0;
 		min-width: 100%;
 		min-height: 100%;
 		z-index: -1;
@@ -91,12 +91,17 @@
 		.content h1 {
 			position: absolute;
 			top: 30%;
+			left: 20%;
 			background-color: rgba(0,0,0,0.00);
 			font-size: 200%;
 		}
 		
 		.content h1:first-line {
 			font-size: 200%;
+		}
+		
+		#reel {
+			left: -80%;
 		}
 	}
 </style>
@@ -111,7 +116,7 @@
 		<nav>
 		<ul>
 			<a href="about.html">About Me</a>
-			<a href="art.html">Art</a>
+			<a href="">Art</a>
 			<a href="https://bitbucket.org/%7B43595313-b9fd-4a6b-a5a8-9b099b26520e%7D/" target="_blank">Git</a>
 			<a href="journal.html">Journal</a>
 		</ul>
