@@ -48,6 +48,7 @@
 
 @media (max-width: 412px){
 	#header img {
+		top: 10px;
 		height: 40%;
 		width: 40%;
 	}
@@ -56,6 +57,9 @@
 		display: none;
 	}
 	
+	.vertical-menu {
+		top: 5px;
+	}
 	.vertical-menu a {
 		font-size: 100%;
 		line-height: 20px;
