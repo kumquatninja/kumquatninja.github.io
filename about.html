@@ -3,23 +3,37 @@
 <head>
 <meta charset="utf-8">
 <title>About</title>
-<link href="../css/styles.css" type="text/css" rel="stylesheet" />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+	
+<style>
+	body {
+		background-color: rgba(55,255,93,1.00)
+	}
+	
+	.page {
+		position: fixed;
+		top: 400px;
+	}
+	
+</style>
 </head>
 
 <body>
-	<div id="page">
-		<header>
-			<h1>KUMQUATNINJA</h1>
+	<header id="header">
+		<a href="index.html"><img src="images/ICON3-transparent-cropped.png" alt="Kumquat Ninja" /></a>
+		<div class="vertical-menu">
+			<h1>Parwesh Rallapalli</h1>
 			<nav>
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About Me</a></li>
-				<li><a href="">Art</a></li>
-				<li><a href="">Code</a></li>
-				<li><a href="journal.html">Journal</a></li>
+				<a href="about.html">About Me</a>
+				<a href="">Art</a>
+				<a href="https://bitbucket.org/%7B43595313-b9fd-4a6b-a5a8-9b099b26520e%7D/" target="_blank">Git</a>
+				<a href="journal.html">Journal</a>
 			</ul>
 			</nav>
-		</header>
+		</div>
+	</header>
+	<div class="page">
 		<p>
 			I built this site from scratch, without the use of a framework or library.
 		</p>
