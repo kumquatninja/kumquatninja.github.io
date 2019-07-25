@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+#header {
+	/*background-color: rgba(0,0,0,0.68);*/
+	height: 400px;
+}
+
 #header img {
 	-webkit-filter: drop-shadow(5px 5px 8px #222);
 	filter:         drop-shadow(5px 5px 8px #222); 
