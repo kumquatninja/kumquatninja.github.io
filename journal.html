@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Parwesh | Journal</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<link href="favicon.png" rel="shortcut icon" type="image/png" />
 <style>
@@ -23,17 +24,6 @@
 		position: relative;
 		height: 250px;
 		bottom: 0px;
-	}
-	
-	h3 {
-		display: block;
-	}
-	
-	@media (max-width: 600px) {
-		#header {
-			display: block;
-			height: auto;
-		}
 	}
 </style>
 </head>
@@ -54,117 +44,124 @@
 		</div>
 	</div>
 </header>
-<div class="page">
-	<h3>Here I keep track of the media I'm consuming this summer.</h3>
+<h3>Here I keep track of the media I'm consuming this summer.</h3>
 
 	<a href="#movies">Movies</a>
 	<a href="#tv">TV</a>
 	<a href="#videogames">Videogames</a>
 
-	<div class="media-grid">
-	<h2 id="movies">Movies</h2>
-		<div class="entry">
-			<figure>
-				<a href="https://www.themoviedb.org/movie/489925-eighth-grade" target="_blank">
-				<img src="https://image.tmdb.org/t/p/w1280/xTa9cLhGHfQ7084UvoPQ2bBXKqd.jpg"
+<div class="container">
+<h2 id="movies">Movies</h2>
+<div class="row">
+	<div class="col-lg-3 col-md-4 col-6">
+		<figure>
+			<a href="https://www.themoviedb.org/movie/489925-eighth-grade" target="_blank">
+			<img src="https://image.tmdb.org/t/p/w1280/xTa9cLhGHfQ7084UvoPQ2bBXKqd.jpg"
 					 width="160" height="250"
 					 alt="Movie Poster"
 					 title="Eighth Grade Movie Poster" />
-				<figcaption>Eighth Grade (2018)</figcaption>
-				</a>
-			</figure>
-		</div>
-		<div class="entry">
-			<figure>
-				<a href="https://www.themoviedb.org/movie/4977-papurika" target="_blank">
-				<img src="https://image.tmdb.org/t/p/w1280/dJI2FSs3qfEPW82cWYfIaV8cVmN.jpg" alt="Paprika movie poster"/>
-				<figcaption>Paprika (2006)</figcaption>
-				</a>
-			</figure>
-		</div>
-		<div class="entry">
-			<figure>
-				<a href="https://www.themoviedb.org/movie/71883-redline" target="_blank">
-				<img src="https://image.tmdb.org/t/p/w1280/il2bErXZTjzuzAVhoAjV3F5WIim.jpg" alt="Redline movie poster" />
-				<figcaption>Redline (2009)</figcaption>
-				</a>
-			</figure>
-		</div>
-		<div class="entry">
-			<figure>
-				<a href="https://www.themoviedb.org/movie/267970-sarusuberi" target="_blank">
-					<img src="https://image.tmdb.org/t/p/w1280/k1kgyBp3rByAbjZci9CcqGFdqae.jpg" alt="Miss Hokusai movie poster"/>
-					<figcaption>Miss Hokusai (2015)</figcaption>
-				</a>
-			</figure>
-		</div>
-		<div class="entry">
-			<figure>
-				<a href="https://www.themoviedb.org/movie/37797-mimi-wo-sumaseba" target="_blank">
-				<img src="https://image.tmdb.org/t/p/w1280/2R1Ffu4V7azxXkRcBKtVCW8AXA7.jpg" alt="Whisper of the Heart movie poster" />
-				<figcaption>Whisper of the Heart (1995)</figcaption>
-				</a>
-			</figure>
-		</div>
-	</div>
-
-	<div class="media-grid">
-	<h2 id="tv">TV</h2>
-		<div class="entry">
-		<figure>
-			<a href="https://www.themoviedb.org/tv/46260-naruto" target="_blank">
-			<img src="https://image.tmdb.org/t/p/w1280/lTVhwFcSHqN0Xv8HLxDHILtrwfX.jpg" alt="Naruto poster"/>
-			<figcaption>Naruto (2002-2007)</figcaption>
+			<figcaption>Eighth Grade (2018)</figcaption>
 			</a>
-		</figure>
-		</div>
-
-		<div class="entry">
+	    </figure>
+    </div>
+	<div class="col-lg-3 col-md-4 col-6">
 		<figure>
-			<a href="https://www.themoviedb.org/tv/45790" target="_blank">
-			<img src="https://image.tmdb.org/t/p/w1280/ogAWwbh3frWtiTyyXrZaVFtqCgp.jpg" alt="JoJo's Bizarre Adventure poster"/>
-			<figcaption>JoJo's Bizarre Adventure: Diamond Is Unbreakable (2016)</figcaption>
+			<a href="https://www.themoviedb.org/movie/4977-papurika" target="_blank">
+			<img src="https://image.tmdb.org/t/p/w1280/dJI2FSs3qfEPW82cWYfIaV8cVmN.jpg" alt="Paprika movie poster" height="250px" />
+			<figcaption>Paprika (2006)</figcaption>
 			</a>
-		</figure>
-		</div>
-
-		<div class="entry">
+	    </figure>
+    </div>
+	<div class="col-lg-3 col-md-4 col-6">
 		<figure>
-			<a href="https://www.themoviedb.org/tv/1429" target="_blank">
-			<img src="https://image.tmdb.org/t/p/w1280/fBX1QMl4iZOKxuRuBOMnoHlmS4l.jpg" alt="Attack on Titan poster" />
-			<figcaption>Attack on Titan: Season 3 Part 2 (2019)</figcaption>
+			<a href="https://www.themoviedb.org/movie/71883-redline" target="_blank">
+			<img src="https://image.tmdb.org/t/p/w1280/il2bErXZTjzuzAVhoAjV3F5WIim.jpg" alt="Redline movie poster" height="250px" />
+			<figcaption>Redline (2009)</figcaption>
 			</a>
-		</figure>
-		</div>
-	</div>
+	    </figure>
+    </div>
+	<div class="col-lg-3 col-md-4 col-6">
+		<figure>
+			<a href="https://www.themoviedb.org/movie/267970-sarusuberi" target="_blank">
+				<img src="https://image.tmdb.org/t/p/w1280/k1kgyBp3rByAbjZci9CcqGFdqae.jpg" alt="Miss Hokusai movie poster" height="250px" />
+				<figcaption>Miss Hokusai (2015)</figcaption>
+			</a>
+	    </figure>
+    </div>
+	<div class="col-lg-3 col-md-4 col-6">
+		<figure>
+			<a href="https://www.themoviedb.org/movie/37797-mimi-wo-sumaseba" target="_blank">
+			<img src="https://image.tmdb.org/t/p/w1280/2R1Ffu4V7azxXkRcBKtVCW8AXA7.jpg" alt="Whisper of the Heart movie poster" height="250px" />
+			<figcaption>Whisper of the Heart (1995)</figcaption>
+			</a>
+	    </figure>
+    </div>
+</div>
+<h2 id="tv">TV</h2>
+<div class="row">
+	<div class="col-lg-3 col-md-4 col-6">
+	  <figure>
+		  <a href="https://www.themoviedb.org/tv/46260-naruto" target="_blank">
+		  <img src="https://image.tmdb.org/t/p/w1280/lTVhwFcSHqN0Xv8HLxDHILtrwfX.jpg" alt="Naruto poster" height="250px" />
+		  <figcaption>Naruto (2002-2007)</figcaption>
+		  </a>
+	  </figure>
+    </div>
 
-	<div class="media-grid">
-	<h2 id="videogames">Video Games</h2>
-			<figure>
-				<a href="https://www.igdb.com/games/super-smash-bros-ultimate" target="_blank">
-				<img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1il8.jpg" alt="Super Smash Bros. Ultimate Box Art" />
-				<figcaption>Super Smash Bros. Ultimate [Switch] (2018)</figcaption>
-				</a>
-			</figure>
-			<figure>
-				<a href="https://www.igdb.com/games/metal-gear-solid-4-guns-of-the-patriots" target="_blank">
-				<img src="https://images.igdb.com/igdb/image/upload/t_cover_big/d2fit4olitiwoxkpvh0t.jpg" alt="Metal Gear Solid 4 Box Art" />
-				<figcaption>Metal Gear Solid 4: Guns of the Patriots [PS3] (2008)</figcaption>
-				</a>
-			</figure>
-			<figure>
-				<a href="https://www.igdb.com/games/the-witcher-3-wild-hunt" target="_blank">
-				<img src="https://images.igdb.com/igdb/image/upload/t_cover_big/tri1c6vbydeosoqajwt1.jpg" alt="The Witcher 3 Box Art" />
-				<figcaption>Witcher 3: Wild Hunt [PC] (2015)</figcaption>
-				</a>
-			</figure>
-			<figure>
-				<a href="https://www.igdb.com/games/final-fantasy-vi" target="_blank">
-				<img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1l92.jpg" alt="Final Fantasy VI Box Art" />
-				<figcaption>Final Fantasy VI [SNES] (1994)</figcaption>
-				</a>
-			</figure>
+	<div class="col-lg-3 col-md-4 col-6">
+	  <figure>
+		  <a href="https://www.themoviedb.org/tv/45790" target="_blank">
+		  <img src="https://image.tmdb.org/t/p/w1280/ogAWwbh3frWtiTyyXrZaVFtqCgp.jpg" alt="JoJo's Bizarre Adventure poster" height="250px"/>
+		  <figcaption>JoJo's Bizarre Adventure: Diamond Is Unbreakable (2016)</figcaption>
+		  </a>
+	  </figure>
+    </div>
+
+	<div class="col-lg-3 col-md-4 col-6">
+	  <figure>
+		  <a href="https://www.themoviedb.org/tv/1429" target="_blank">
+		  <img src="https://image.tmdb.org/t/p/w1280/fBX1QMl4iZOKxuRuBOMnoHlmS4l.jpg" alt="Attack on Titan poster" height="250px" />
+		  <figcaption>Attack on Titan: Season 3 Part 2 (2019)</figcaption>
+		  </a>
+	  </figure>
+    </div>
+</div>
+
+<h2 id="videogames">Video Games</h2>
+<div class="row">
+	<div class="col-lg-3 col-md-4 col-6">
+		<figure>
+			<a href="https://www.igdb.com/games/super-smash-bros-ultimate" target="_blank">
+			<img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1il8.jpg" alt="Super Smash Bros. Ultimate Box Art" height="250px"/>
+			<figcaption>Super Smash Bros. Ultimate [Switch] (2018)</figcaption>
+			</a>
+	    </figure>
 	</div>
+	<div class="col-lg-3 col-md-4 col-6">
+		<figure>
+			<a href="https://www.igdb.com/games/metal-gear-solid-4-guns-of-the-patriots" target="_blank">
+			<img src="https://images.igdb.com/igdb/image/upload/t_cover_big/d2fit4olitiwoxkpvh0t.jpg" alt="Metal Gear Solid 4 Box Art" height="250px" />
+			<figcaption>Metal Gear Solid 4: Guns of the Patriots [PS3] (2008)</figcaption>
+			</a>
+	    </figure>
+	</div>
+	<div class="col-lg-3 col-md-4 col-6">
+		<figure>
+			<a href="https://www.igdb.com/games/the-witcher-3-wild-hunt" target="_blank">
+			<img src="https://images.igdb.com/igdb/image/upload/t_cover_big/tri1c6vbydeosoqajwt1.jpg" alt="The Witcher 3 Box Art" height="250px" />
+			<figcaption>Witcher 3: Wild Hunt [PC] (2015)</figcaption>
+			</a>
+	    </figure>
+	</div>
+	<div class="col-lg-3 col-md-4 col-6">
+		<figure>
+			<a href="https://www.igdb.com/games/final-fantasy-vi" target="_blank">
+			<img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1l92.jpg" alt="Final Fantasy VI Box Art" height="250px" />
+			<figcaption>Final Fantasy VI [SNES] (1994)</figcaption>
+			</a>
+	    </figure>
+	</div>
+</div>
 </div>
 </body>
 </html>
