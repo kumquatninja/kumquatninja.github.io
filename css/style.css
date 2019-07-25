@@ -2,7 +2,6 @@
 
 #header {
 	/*background-color: rgba(0,0,0,0.68);*/
-	height: 400px;
 }
 
 #header img {
@@ -51,7 +50,8 @@
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
-@media (max-width: 412px){
+@media (max-width:600px){
+	
 	#header img {
 		top: 10px;
 		height: 40%;
