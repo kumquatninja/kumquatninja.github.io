@@ -72,16 +72,33 @@ Hi! - Parwesh
 		/*font-size: 200%;*/
 	}
 	
-	#insta img{
-		height: 10%;
+	#links {
+		list-style: none;
+		text-decoration: none;
 		position: absolute;
 		right: 10%;
-		bottom: 10%;
+		bottom: 5%;
+	}
+	#links li img {
+		display: inline-block;
+		position: static;
+		height: 100px;
+		padding: 20px;
 	}
 	
-	#insta img:hover {
+	#links li img:hover {
 		-webkit-filter: invert(100%);
 		filter: invert(100%);
+	}
+	
+	#git img {
+		position: absolute;
+		right: 10%;
+	}
+	
+	#insta img {
+		position: absolute;
+		right: 20%;
 	}
 	
 	/* Style the button used to pause/play the video */
@@ -154,11 +171,18 @@ Hi! - Parwesh
 	<h1 class="glitch">DIY<br>animator<br>artist<br>developer<br>engineer</h1>
 	<!-- Button to Play/Pause video with JavaScript -->
 	<button id="ppBtn" onclick="myFunction()">Pause</button>
-	<div id="insta">
-		<a href="https://www.instagram.com/parweshrallapalli/" target="_blank">
-			<img src="images/insta-icon.png" alt="Click to go to Instagram">
-		</a>
-	</div>
+    <ul id="links">
+		<li id="insta">
+			<a href="https://www.instagram.com/parweshrallapalli/" target="_blank">
+			  <img src="images/insta-icon.png" alt="Click to go to Instagram" />
+			</a>
+		</li>
+		<li id="git">
+			<a href="https://github.com/kumquatninja" target="_blank">
+				<img src="images/github-icon.png" alt="Click to go to GitHub" />
+  			</a>
+        </li>
+    </ul>
 </div>
 	
 <script>
