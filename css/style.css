@@ -4,8 +4,6 @@
 	/*background-color: rgba(0,0,0,0.68);*/
 }
 
-#header h1 {}
-
 #header img {
 	float: left;
 	top: 50px;
@@ -35,7 +33,7 @@
 	text-align: right;
   	padding: 14px 16px;
   	text-decoration: none;
-	font-size: 32px;
+	font-size: 28px;
 }
 
 .vertical-menu a:hover {
