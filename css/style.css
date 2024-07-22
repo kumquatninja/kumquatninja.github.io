@@ -4,6 +4,12 @@
 	/*background-color: rgba(0,0,0,0.68);*/
 }
 
+#header-logo{
+	background: url(images/ICON3-transparent-cropped.png) no-repeat center center;
+	background-size: cover;
+	width: 152px
+  }
+
 #header img {
 	float: left;
 	top: 50px;
