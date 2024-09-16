@@ -1,3 +1,11 @@
+:root {
+    --bulma-body-background-color: #ffb2ed;
+    --bulma-body-family: "Zen Maru Gothic", serif, black;
+    --bulma-body-color: black;
+    /* font-style:normal; */
+    /* --bulma-title-color: rgb(189, 51, 51); */
+}
+
 .column {
     display: flex;
     flex-direction: row;
@@ -31,6 +39,54 @@
 
 .single-spaced, .single-spaced * {
     line-height: 1;
+}
+
+.js-modal-trigger{
+    /* overflow: hidden; */
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.js-modal-trigger:hover{
+    -webkit-filter: brightness(80%);
+	-moz-filter: brightness(80%);
+	-o-filter: brightness(80%);
+	-ms-filter: brightness(80%);
+	filter: brightness(80%);
+    opacity: 0.5;
+}
+
+/* .title{
+    -webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.title:hover{
+    color: white;
+} */
+
+.modal-button{
+    border-color: black;
+    border-radius: 10px;
+    border: 3px solid;
+    -webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+    overflow: hidden;
+    height: 20rem;
+    width: auto;
+}
+
+.modal-button:hover{
+    /* border: 2px solid #dadada;
+    border-radius: 7px; */
+    transform: scale(1.05);
+    background-color: #ffffff;
+}
+
+.img--modal-button
+{
+    transform: scale(1.5);
 }
 
 @media (max-width: 1024px) {

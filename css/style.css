@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-#header {
+/* #header { */
 	/*background-color: rgba(0,0,0,0.68);*/
-}
+/* } */
 
 #header-logo{
 	background: url(images/ICON3-transparent-cropped.png) no-repeat center center;
@@ -52,6 +52,14 @@
     top: 0px;
 	background-color: rgba(54,211,57,1.00);
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+.image:hover{
+    -webkit-filter: brightness(70%);
+	-moz-filter: brightness(70%);
+	-o-filter: brightness(70%);
+	-ms-filter: brightness(70%);
+	filter: brightness(70%);
 }
 
 @media (max-width:600px){
