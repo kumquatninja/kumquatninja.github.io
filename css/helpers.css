@@ -28,7 +28,7 @@
 }
 
 .top    { align-items:      flex-start; }
-.right  { justify-content:  flex-end;   }
+.right  { justify-content:  flex-end;  }
 .bottom { align-items:      flex-end;   }
 
 .left   {
@@ -75,6 +75,7 @@
     overflow: hidden;
     height: auto;
     width: 600px;
+    
 }
 
 .modal-button:hover{
