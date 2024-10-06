@@ -48,7 +48,7 @@
 	transition: .3s ease-in-out;
 }
 
-.js-modal-trigger:hover{
+.js-modal-trigger:hover {
     -webkit-filter: brightness(80%);
 	-moz-filter: brightness(80%);
 	-o-filter: brightness(80%);
