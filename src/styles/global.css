@@ -5,14 +5,13 @@ body {
     padding: 1rem;
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: black;
     margin-bottom: 0%;
     text-align: left;
     display: block;
-    background-color: black;
 }
 
-h1 { font-size: 4em; }
+h1 { font-size: 3em; }
 
 h2 { 
     font-size: 2em; 
