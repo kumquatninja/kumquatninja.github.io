@@ -2,6 +2,8 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 80ch;
+    min-height: 100vh;
+    position: relative;
     padding: 1rem;
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
@@ -11,7 +13,10 @@ body {
     display: block;
 }
 
-h1 { font-size: 3em; }
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
 
 h2 { 
     font-size: 2em; 
@@ -81,4 +86,13 @@ p {
     .hamburger {
         display: none;
     }
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: #ff9776;
+    color: white;
 }
