@@ -1,4 +1,6 @@
-body {
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+/* body {
     margin: 0 auto;
     width: 100%;
     max-width: 80ch;
@@ -92,4 +94,4 @@ footer {
     width: 100%;
     background-color: #ff9776;
     color: white;
-}
+} */

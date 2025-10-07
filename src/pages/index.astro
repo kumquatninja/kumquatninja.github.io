@@ -3,13 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Parwesh"
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<div class="hero">
-		<h1>Parwesh Rallapalli</h1>
-		<h2>
-			Game Designer <strong><a href="https://treyarch.com" target="_blank">@Treyarch</a></strong>
-		</h2>
-		<subtitle>Currently working on <b>Call of Duty&#174;: Black Ops 7</b> and an <b>indie stealth-action games</b>.</subtitle>
-	</div>
+	<section class="hero">
+		<div class="hero-body">
+			<p class="title">Parwesh Rallapalli</p>
+			<p class="subtitle">
+				Game Designer <strong><a href="https://treyarch.com" target="_blank">@Treyarch</a></strong>
+			</p>
+			<p>Currently working on <b>Call of Duty&#174;: Black Ops 7</b> and an <b>indie stealth-action games</b>.</p>
+		</div>
+	</section>
 	<video autoplay muted loop id="reel">
 		<source type="video/mp4" src="/src/content/reel2_small.mp4" />
 	</video>
