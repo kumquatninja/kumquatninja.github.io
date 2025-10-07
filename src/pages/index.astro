@@ -7,30 +7,38 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<link rel="shortcut icon" type="image/x-ico" href="/public/favicon.ico" />
+		<link rel="shortcut icon" type="image/x-ico" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Parwesh | KN</title>
 	</head>
 	<body>
 		<nav>
-			<a href="https://www.linkedin.com/in/parweshrallapalli/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+			<a href="index.html">Home</a> |
+			<a href="index.html">Dev</a> |
+			<a href="index.html">Blog</a> |
+			<a href="index.html">Art</a> |
+			<a href="about.html">About</a>
 		</nav>
-		<h1>Parwesh Rallapalli</h1>
-		<h2>Game Designer</h2>
-		<subtitle>Currently working on AAA multiplayer first-person shooters and indie stealth-action games.</subtitle>
-
+		<div class="hero">
+			<h1>Parwesh Rallapalli</h1>
+			<h2>Game Designer</h2>
+			<subtitle>Currently working on <b>AAA multiplayer first-person shooters</b> and <b>indie stealth-action games</b>.</subtitle>
+		</div>
 		<video autoplay muted loop id="reel">
 			<source type="video/mp4" src="/src/content/reel2_small.mp4" />
 		</video>
 	</body>
 </html>
 <style>
+	nav {
+		text-align: center;
+	}
 	body {
 		font-family: 'Roboto', sans-serif;
 		color: white;
 		margin-bottom: 0%;
-		text-align: center;
+		text-align: left;
 		display: block;
 		background-color: black;
 	}
