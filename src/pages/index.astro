@@ -1,6 +1,7 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 ---
 <html lang="en">
 	<head>
@@ -14,7 +15,7 @@ import Footer from '../components/Footer.astro';
 		<title>Parwesh | KN</title>
 	</head>
 	<body>
-		<Navigation />
+		<Header />
 		<div class="hero">
 			<h1>Parwesh Rallapalli</h1>
 			<h2>Game Designer</h2>
@@ -26,21 +27,8 @@ import Footer from '../components/Footer.astro';
 		<Footer />
 	</body>
 </html>
+
 <style>
-	nav {
-		text-align: center;
-	}
-	body {
-		font-family: 'Roboto', sans-serif;
-		color: white;
-		margin-bottom: 0%;
-		text-align: left;
-		display: block;
-		background-color: black;
-	}
-	h1 { font-size: 4em; }
-	h2 { font-size: 2em; font-weight: 300; }
-	p { font-size: 1.2em; font-weight: 300; }
 	#reel {
 		overflow: hidden;
 	  	-webkit-background-size: cover;
