@@ -5,6 +5,7 @@
 }
 
 .navbar-item {
+    background-color: transparent !important;
     /* font-size: 1.2em; */
     color: rgb(95, 95, 95);
 }
