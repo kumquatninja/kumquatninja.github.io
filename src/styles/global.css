@@ -1,5 +1,9 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
+.navbar {
+    background-color: transparent !important;
+}
+
 /* body {
     margin: 0 auto;
     width: 100%;

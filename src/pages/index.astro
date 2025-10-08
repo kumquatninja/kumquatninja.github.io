@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Parwesh"
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<section class="hero is-fullheight-is-relative level">
+	<section class="hero is-fullheight-with-navbar level">
 		<video autoplay muted loop playsinline class="background-video" id="reel">
 			<source type="video/mp4" src="/src/content/reel2_small.mp4" />
 		</video>
@@ -35,5 +35,18 @@ const pageTitle = "Parwesh"
 		height: 100%;
 		object-fit: cover;
 		z-index: -1;
+	}
+
+	img {
+		-webkit-filter: drop-shadow(5px 5px 8px #22222271);
+		filter: drop-shadow(5px 5px 8px #22222271); 
+	}
+
+	.hero .title,
+	.hero .subtitle,
+	.hero p
+	{
+		color: white;
+		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 	}
 </style>
