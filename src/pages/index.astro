@@ -8,7 +8,8 @@ const pageTitle = "Parwesh"
 			<source type="video/mp4" src="/src/content/reel2_small.mp4" />
 		</video>
 
-		<div class="hero-body level-left">
+		<!-- HERO -->
+		<div class="container hero-body level-left">
 			<div class="level-item">
 				<img src="/src/content/kn-logo.png" alt="Kumquat Ninja logo" width=200rem />
 			</div>
@@ -38,24 +39,24 @@ const pageTitle = "Parwesh"
 			<div class="column is-one-third">
 			<div class="card">
 				<div class="card-content">
-				<p class="title">Project 1</p>
-				<p class="subtitle">Short description</p>
+				<p class="title">Black Ops 7</p>
+				<p class="subtitle">AAA Multiplayer First-Person Shooter</p>
 				</div>
 			</div>
 			</div>
 			<div class="column is-one-third">
 			<div class="card">
 				<div class="card-content">
-				<p class="title">Project 2</p>
-				<p class="subtitle">Short description</p>
+				<p class="title">Black Ops 6</p>
+				<p class="subtitle">AAA Multiplayer First-Person Shooter</p>
 				</div>
 			</div>
 			</div>
 			<div class="column is-one-third">
 			<div class="card">
 				<div class="card-content">
-				<p class="title">Project 3</p>
-				<p class="subtitle">Short description</p>
+				<p class="title">Heart Heist</p>
+				<p class="subtitle">Indie Stealth-Action</p>
 				</div>
 			</div>
 			</div>
@@ -84,7 +85,22 @@ const pageTitle = "Parwesh"
 	.hero {
 		display: flex;
 		align-items: flex-start;
+		padding-top: 5rem;
 	}
+
+	.hero::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+		z-index: 1;
+    }
+
+    .hero-body {
+		position: relative;
+		z-index: 2;
+		max-width: 600px;
+    }
 
 	.hero .title,
 	.hero .subtitle,
