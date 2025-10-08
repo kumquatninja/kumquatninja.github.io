@@ -3,7 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Parwesh"
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<section class="hero level">
+	<section class="hero is-fullheight-is-relative level">
+		<video autoplay muted loop playsinline class="background-video" id="reel">
+			<source type="video/mp4" src="/src/content/reel2_small.mp4" />
+		</video>
+
 		<div class="hero-body level-left">
 			<div class="level-item">
 				<img src="/src/content/kn-logo.png" alt="Kumquat Ninja logo" width=200rem />
@@ -19,25 +23,17 @@ const pageTitle = "Parwesh"
 			</div>
 		</div>
 	</section>
-	<video autoplay muted loop id="reel">
-		<source type="video/mp4" src="/src/content/reel2_small.mp4" />
-	</video>
 </BaseLayout>
 </html>
 
 <style>
-	#reel {
-		overflow: hidden;
-	  	-webkit-background-size: cover;
-  		-moz-background-size: cover;
- 		-o-background-size: cover;
-  		background-size: cover;
-		position: fixed;
-		top: 0%;
-		bottom: -5%;
-		left: 0%;
-		min-width: 100%;
-		min-height: 100%;
+	.background-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 		z-index: -1;
 	}
 </style>
