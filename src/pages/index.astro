@@ -3,13 +3,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Parwesh"
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<section class="hero">
-		<div class="hero-body">
-			<p class="title">Parwesh Rallapalli</p>
-			<p class="subtitle">
-				Game Designer <strong><a href="https://treyarch.com" target="_blank">@Treyarch</a></strong>
-			</p>
-			<p>Currently working on <em>Call of Duty&#174;: Black Ops 7</em> and an <em>indie stealth-action game</em>.</p>
+	<section class="hero level">
+		<div class="hero-body level-left">
+			<div class="level-item">
+				<img src="/src/content/kn-logo.png" alt="Kumquat Ninja logo" width=200rem />
+			</div>
+			<div class="level-item">
+				<div>
+					<p class="title">Parwesh Rallapalli</p>
+					<p class="subtitle">
+						Game Designer <strong><a href="https://treyarch.com" target="_blank">@Treyarch</a></strong>
+					</p>
+					<p>Currently working on <a href="https://www.callofduty.com/blackops7" target="_blank"><em>Call of Duty&#174;: Black Ops 7</em></a> and an <em>indie stealth-action game</em>.</p>
+				</div>
+			</div>
 		</div>
 	</section>
 	<video autoplay muted loop id="reel">
@@ -19,11 +26,6 @@ const pageTitle = "Parwesh"
 </html>
 
 <style>
-	body {
-		color: white;
-		text-align: ;
-	}
-
 	#reel {
 		overflow: hidden;
 	  	-webkit-background-size: cover;
