@@ -4,6 +4,11 @@
     background-color: transparent !important;
 }
 
+.navbar-item {
+    /* font-size: 1.2em; */
+    color: rgb(95, 95, 95);
+}
+
 .navbar-item:hover {
     background-color: transparent !important;
     color: white;
