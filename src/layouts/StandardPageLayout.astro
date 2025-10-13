@@ -1,0 +1,10 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+const { pageTitle } = Astro.props;
+---
+<BaseLayout>
+    <section class="section is-large">
+        <h1 class="title is-3">{pageTitle}</h1>
+        <slot />
+    </section>
+</BaseLayout>
