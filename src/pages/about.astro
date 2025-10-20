@@ -3,12 +3,39 @@ import StandardPageLayout from "../layouts/StandardPageLayout.astro";
 const pageTitle = "About Me";
 ---
 <StandardPageLayout pageTitle={pageTitle}>
-    <p>I'm a game designer with a background in computer engineering and art.</p>
-    <p>I currently reside in Los Angeles, California and work on the <i>Call of Duty: Black Ops</i> series of video games as well as an indie stealth-action game.</p>
+    <p>
+        I'm a <strong>game designer</strong> currently working on the <i>Call of Duty: Black Ops</i> series of video games as well as an indie stealth-action game.
+        <br/><br/>
+        I'm obsessed with discovering truth in design, and making the best entertainment possible, which my multidisciplinary background in science and art has aided me in pursuing.
+        <br/><br/>
+        I currently reside in Los Angeles, California.
+    </p>
     <h2 class="title is-4">Publication</h2>
+    <ul>
+        <li>
+            Oliver, Jakob Arndt, Parwesh Rallapalli, Hodger Blume (2019). “Portable Implementations for High-End Hardware Platforms”,<br />
+            Big Data Analytics in Cyber-Physical Systems: Machine Learning for the Internet of Things. Elsevier.
+        </li>
+    </ul>
     <h2 class="title is-4">Education</h2>
     <ul>
         <li><i>M.S. Computer Science</i> from University of Southern California (May 2022)</li>
         <li><i>B.S.E. Computer Engineering</i> from Michigan State University (Dec 2019)</li>
     </ul>
+    <h2 class="title is-4">Certifications</h2>
+    <ul>
+        <li><i>Deep Learning for Computer Vision</i> from NVIDIA Deep Learning Institute (May 2019)</li>
+        <li><i>Machine Learning</i> from Stanford University (Dec 2017)</li>
+    </ul>
 </StandardPageLayout>
+
+<style>
+    body {
+        background-color: rgb(186, 235, 186);
+        color: black;
+    }
+
+    .title {
+        color: rgb(84, 77, 187);
+    }
+</style>
