@@ -3,7 +3,7 @@ import BaseLayout from "./BaseLayout.astro"
 const { pageTitle } = Astro.props;
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <section class="container section is-large">
+    <section class="container content section">
         <h1 class="title is-3">{pageTitle}</h1>
         <slot />
     </section>
