@@ -2,7 +2,7 @@
 import StandardPageLayout from "../layouts/StandardPageLayout.astro";
 const pageTitle = "About Me";
 ---
-<StandardPageLayout pageTitle={pageTitle}>
+<StandardPageLayout pageTitle={pageTitle} titleClass="about-title">
     <p>
         I'm a <strong>game designer</strong> currently working on the <i>Call of Duty: Black Ops</i> series of video games as well as an indie stealth-action game.
         <br/><br/>
@@ -10,6 +10,14 @@ const pageTitle = "About Me";
         <br/><br/>
         I currently reside in Los Angeles, California.
     </p>
+    <h2 class="title is-4">Skills</h2>
+    <ul>
+        <li>Design Process, Documentation</li>
+        <li>C/C++, C#, Python, HLSL/NVIDIA CG</li>
+        <li>ML, DL, Computer Vision</li>
+        <li>3D Math, Linear Algebra, Calculus</li>
+        <li>Microcontrollers, Analog & Digital Circuits, Hardware</li>
+    </ul>
     <h2 class="title is-4">Publication</h2>
     <ul>
         <li>
@@ -33,6 +41,15 @@ const pageTitle = "About Me";
     body {
         background-color: rgb(186, 235, 186);
         color: black;
+        text-emphasis-color: black;
+    }
+
+    em {
+        color: black;
+    }
+
+    .about-title {
+        color: rgb(221, 5, 5);
     }
 
     .title {
