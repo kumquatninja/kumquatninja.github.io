@@ -21,7 +21,7 @@ const art = defineCollection({
         mediaType: z.enum(["image", "video"]),
         mediaSrc: z.string(),
         description: z.string().optional(),
-    })
+    }),
 });
 
 export const collections = { projects, art };
