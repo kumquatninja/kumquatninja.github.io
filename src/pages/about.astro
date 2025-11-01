@@ -2,37 +2,47 @@
 import StandardPageLayout from "../layouts/StandardPageLayout.astro";
 const pageTitle = "About Me";
 ---
-<StandardPageLayout pageTitle={pageTitle} titleClass="about-title">
-    <p>
-        I'm a <strong>game designer</strong> currently working on the <i>Call of Duty&reg;: Black Ops</i> series of video games as well as an indie stealth-action game.
-        <br/><br/>
-        I'm obsessed with discovering truth in design, and making the best entertainment of all time, which my multidisciplinary background in science and art has aided me in pursuing.
-        <br/><br/>
-        I currently reside in Los Angeles, California.
-    </p>
-    <h2 class="title is-4">Skills</h2>
-    <ul>
-        <li>Design Process, Documentation</li>
-        <li>C/C++, C#, Python, HLSL/NVIDIA CG</li>
-        <li>ML, DL, Computer Vision</li>
-        <li>3D Math, Linear Algebra, Calculus</li>
-        <li>Microcontrollers, Analog & Digital Circuits, Hardware</li>
-    </ul>
+<StandardPageLayout pageTitle={pageTitle} class="about-title">
+    <div class="about-section">
+        <p>
+            I'm a <strong>game designer</strong> currently working on the <i>Call of Duty&reg;: Black Ops</i> series of video games as well as an indie stealth-action game.
+            <br/><br/>
+            I'm obsessed with discovering truth in design, and making the best entertainment of all time, which my multidisciplinary background in science and art has aided me in pursuing.
+            <br/><br/>
+            I currently reside in Los Angeles, California.
+        </p>
+    </div>
+    <div class="about-section">
+        <h2 class="title is-4">Skills</h2>
+        <ul>
+            <li>Design Process, Documentation</li>
+            <li>C/C++, C#, Python, HLSL/NVIDIA CG</li>
+            <li>ML, DL, Computer Vision</li>
+            <li>3D Math, Linear Algebra, Calculus</li>
+            <li>Microcontrollers, Analog & Digital Circuits, Hardware</li>
+        </ul>
+    </div>
+    <div class="about-section">
     <h2 class="title is-4">Publication</h2>
-    <p>
-        Oliver, Jakob Arndt, Parwesh Rallapalli, Hodger Blume (2019). “Portable Implementations for High-End Hardware Platforms”,<br />
-        Big Data Analytics in Cyber-Physical Systems: Machine Learning for the Internet of Things. Elsevier.
-    <p>
-    <h2 class="title is-4">Education</h2>
-    <ul>
-        <li><i>M.S. Computer Science</i> from University of Southern California (May 2022)</li>
-        <li><i>B.S.E. Computer Engineering</i> from Michigan State University (Dec 2019)</li>
-    </ul>
-    <h2 class="title is-4">Certifications</h2>
-    <ul>
-        <li><i>Deep Learning for Computer Vision</i> from NVIDIA Deep Learning Institute (May 2019)</li>
-        <li><i>Machine Learning</i> from Stanford University (Dec 2017)</li>
-    </ul>
+        <p>
+            Oliver, Jakob Arndt, Parwesh Rallapalli, Hodger Blume (2019). “Portable Implementations for High-End Hardware Platforms”,<br />
+            Big Data Analytics in Cyber-Physical Systems: Machine Learning for the Internet of Things. Elsevier.
+        <p>
+    </div>
+    <div class="about-section">
+        <h2 class="title is-4">Education</h2>
+            <ul>
+                <li><i>M.S. Computer Science</i> from University of Southern California (May 2022)</li>
+                <li><i>B.S.E. Computer Engineering</i> from Michigan State University (Dec 2019)</li>
+            </ul>
+    </div>
+    <div class="about-section">
+        <h2 class="title is-4">Certifications</h2>
+        <ul>
+            <li><i>Deep Learning for Computer Vision</i> from NVIDIA Deep Learning Institute (May 2019)</li>
+            <li><i>Machine Learning</i> from Stanford University (Dec 2017)</li>
+        </ul>
+    </div>
 </StandardPageLayout>
 
 <style>
@@ -40,6 +50,24 @@ const pageTitle = "About Me";
         background-color: rgb(186, 235, 186);
         color: black;
         text-emphasis-color: black;
+    }
+
+    .about-section {
+        background-color: rgb(217, 255, 217);
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: 8px;
+        box-shadow: 6px 8px 0 rgba(0, 71, 32, 0.377);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .about-section:hover {
+        box-shadow: 8px 10px 0 rgba(0, 71, 32, 0.377);
+        transform: translate(-2px, -2px);
+    }
+
+    .about-title {
+        color: black !important;
     }
 
     em {
