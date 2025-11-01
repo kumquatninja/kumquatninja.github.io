@@ -33,7 +33,7 @@ const projects = await getCollection('projects');
                         {proj.body && <p set:html={proj.body} />}
                         {proj.data.features && (
                             <ul>
-                                {proj.data.features.map((f) => <li>{f}</li>)}
+                                {proj.data.features?.map((feature) => <li set:html={feature}></li>)}
                             </ul>
                         )}
                         {/* <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> --> */}
