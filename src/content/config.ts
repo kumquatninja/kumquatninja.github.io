@@ -14,4 +14,14 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { projects };
+const art = defineCollection({
+    schema: z.object({
+        title: z.string(),
+        year: z.string().optional(),
+        mediaType: z.enum(["image", "video"]),
+        mediaSrc: z.string(),
+        description: z.string().optional(),
+    })
+});
+
+export const collections = { projects, art };
