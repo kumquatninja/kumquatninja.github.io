@@ -71,6 +71,12 @@ projects.sort((a, b) => {
 
     .box {
         filter: drop-shadow(10px 10px 0px #984eaa);
+        transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .box:hover {
+        transform: translate(-2px, -4px);
+        filter: drop-shadow(11px 16px 0px #984eaa);
     }
 
     .project-thumb {
