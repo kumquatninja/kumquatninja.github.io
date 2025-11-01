@@ -1,6 +1,7 @@
 ---
 title: "Call of Duty®: Black Ops 7"
 year: "2025"
+sort: 1
 company: "Treyarch"
 role: "Game Designer (Multiplayer)"
 genre: "Live-Service First-Person Shooter"

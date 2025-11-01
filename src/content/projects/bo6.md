@@ -1,6 +1,7 @@
 ---
 title: "Call of Duty®: Black Ops 6"
 year: "2024"
+sort: 3
 company: "Treyarch"
 role: "Associate Game Designer (Multiplayer)"
 genre: "Live-Service First-Person Shooter"

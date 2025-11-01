@@ -4,6 +4,7 @@ const projects = defineCollection({
     schema: z.object({
         title: z.string(),
         year: z.string(),
+        sort: z.number().optional(),
         company: z.string().optional(),
         role: z.string().optional(),
         genre: z.string().optional(),

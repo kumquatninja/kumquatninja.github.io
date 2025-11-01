@@ -1,6 +1,7 @@
 ---
 title: "Heart Heist"
 year: "TBA"
+sort: 2
 # company: KQUAT
 role: "Director, Writer, Artist, Animator, Programmer"
 genre: "Indie Stealth-Action"

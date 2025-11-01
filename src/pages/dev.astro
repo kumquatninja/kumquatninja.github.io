@@ -4,6 +4,20 @@ import StandardPageLayout from "../layouts/StandardPageLayout.astro";
 
 const pageTitle = "Dev";
 const projects = await getCollection('projects');
+
+// projects.sort((a, b) => Number(b.data.year) - Number(a.data.year))
+projects.sort((a, b) => {
+    const aSort = a.data.sort ?? null;
+    const bSort = b.data.sort ?? null;
+
+    if (aSort !== null && bSort !== null) return aSort - bSort;
+    if (aSort !== null) return -1
+    if (bSort !== null) return 1
+
+    const yearA = a.data.year === "TBA" ? 0 : Number(a.data.year);
+    const yearB = b.data.year === "TBA" ? 0 : Number(b.data.year);
+    return yearB - yearA;
+});
 ---
 <StandardPageLayout pageTitle={pageTitle}>
     <div class ="portfolio-container">
