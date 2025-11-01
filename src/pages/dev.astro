@@ -1,190 +1,46 @@
 ---
+import { getCollection } from "astro:content";
 import StandardPageLayout from "../layouts/StandardPageLayout.astro";
+
 const pageTitle = "Dev";
+const projects = await getCollection('projects');
 ---
 <StandardPageLayout pageTitle={pageTitle}>
     <div class ="portfolio-container">
-        <div class="box project">
-            <div class="columns is-vcentered">
-                <div class="column is-one-third">
-                    <div class="project-thumb">
-                        <video autoplay muted loop playsinline class="project-thumb-video">
-                                <source src="/assets/dev/bo7-trailer-clip-1.mp4" type="video/mp4">
-                        </video>
+        {projects.map((proj) => (
+            <div class="box project">
+                <div class="columns is-vcentered">
+                    <div class="column is-one-third">
+                        <div class="project-thumb">
+                            {proj.data.mediaType === "video" ? (
+                                <video autoplay muted loop playsinline class="project-thumb-video">
+                                        <source src={proj.data.mediaSrc} type="video/mp4" />
+                                </video>
+                            ) : (
+                                <img src={proj.data.mediaSrc} class="project-thumb-image" />
+                            )}
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h2 class="title is-4">{proj.data.title} ({proj.data.year})</h2>
+                        <p class="subtitle is-6">
+                            {proj.data.company ? `${proj.data.company} • ` : ""}
+                            {proj.data.genre ? <em>{proj.data.genre}</em> : ""}
+                            <strong>
+                                {proj.data.role ? ` • ${proj.data.role}` : ""}
+                            </strong>
+                        </p>
+                        {proj.body && <p set:html={proj.body} />}
+                        {proj.data.features && (
+                            <ul>
+                                {proj.data.features.map((f) => <li>{f}</li>)}
+                            </ul>
+                        )}
+                        {/* <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> --> */}
                     </div>
                 </div>
-                <div class="column">
-                    <h2 class="title is-4">Call of Duty&reg;: Black Ops 7 (2025)</h2>
-                    <p class="subtitle is-6">Treyarch • <em>Live-Service First-Person Shooter</em> • <strong>Game Designer (Multiplayer)</strong></p>
-                    <ul>
-                        <li>Game Modes, Player Spawning System</li>
-                        <li>Gameplay Scripting & Programming</li>
-                        <li>Interactive Environments</li>
-                    </ul>
-                    <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="box project">
-            <div class="columns is-vcentered">
-                <div class="column is-one-third">
-                    <div class="project-thumb">
-                        <video autoplay muted loop playsinline class="project-thumb-video">
-                                <source src="/assets/dev/bo6-trailer-clip-1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="column">
-                    <h2 class="title is-4">Call of Duty&reg;: Black Ops 6 (2024)</h2>
-                    <p class="subtitle is-6">Treyarch • <em>Live-Service First-Person Shooter</em> • <strong>Associate Game Designer (Multiplayer)</strong></p>
-                    <ul>
-                        <li>Game Modes (incl., "Prop Hunt"), Player Spawning System</li>
-                        <li>Gameplay Scripting & Programming</li>
-                        <li>Interactive Environments</li>
-                    </ul>
-                    <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="box project">
-            <div class="columns is-vcentered">
-                <div class="column is-one-third">
-                    <div class="project-thumb">
-                        <video autoplay muted loop playsinline class="project-thumb-video">
-                                <source src="/assets/dev/hh-clip-1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="column">
-                    <h2 class="title is-4">Heart Heist (TBA)</h2>
-                    <p class="subtitle is-6"><em>Indie Stealth-Action</em> • <strong>Director, Writer, Artist, Animator, Programmer</strong></p>
-                    <p>
-                        A fast-paced <strong>stealth</strong> game inspired by <em>Metal Gear Solid</em> and <em>Hotline Miami</em> featuring <em>bespoke UI systems</em>, <em>clean architecture</em> 
-                        and <em>reactive guard behaviors</em>.
-                    </p>
-                    <ul>
-                        <li>Designed stealth and AI systems using modular Unity architecture</li>
-                        <li>Built custom FMOD audio integration and visual feedback systems</li>
-                    </ul>
-                    <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="box project">
-            <div class="columns is-vcentered">
-                <div class="column is-one-third">
-                    <div class="project-thumb">
-                        <video autoplay muted loop playsinline class="project-thumb-video">
-                                <source src="/assets/dev/skylost-clip-1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="column">
-                    <h2 class="title is-4">Skylost (2022)</h2>
-                    <p class="subtitle is-6">USC Games • <em>First-Person, Survival, Crafting</em> • <strong>Lead Designer</strong></p>
-                    <p>
-                        A first-person <strong>survival-crafting</strong> game featuring complex <strong>enemy AI</strong>, <strong>stealth</strong>, <strong>non-linear design</strong>, and a <strong>gripping narrative</strong> about rescuing a loved-one lost among the clouds.
-                    </p>
-                    <ul>
-                        <li><strong>Featured selection</strong> on IGN's coverage of USC Games Expo 2022</li>
-                        <li>Led a team of <strong>3 designers</strong> through successful milestones and ship</li>
-                    </ul>
-                    <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> -->
-                </div>
-            </div>
-        </div>
-        <div class="box project">
-            <div class="columns is-vcentered">
-                <div class="column is-one-third">
-                    <div class="project-thumb">
-                        <video autoplay muted loop playsinline class="project-thumb-video">
-                            <source src="/assets/dev/siren-clip-1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="column">
-                    <h2 class="title is-4">The Siren (2021)</h2>
-                    <p class="subtitle is-6"><em>Lovecraftian Survival Horror</em> • <strong>Designer, Artist, Animator</strong></p>
-                    <p>
-                        A fast-paced stealth game inspired by <em>Metal Gear Solid</em>, featuring custom AI systems, 
-                        reactive guard behaviors, and a focus on expressive player movement.
-                    </p>
-                    <ul>
-                        <li>Designed stealth and AI systems using modular Unity architecture</li>
-                        <li>Built custom FMOD audio integration and visual feedback systems</li>
-                    </ul>
-                    <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> -->
-                </div>
-            </div>
-        </div>
-        <div class="box project">
-            <div class="columns is-vcentered">
-                <div class="column is-one-third">
-                    <div class="project-thumb">
-                        <img class="project-thumb-image" src="/assets/dev/hw6-upscaled.png" alt="Screenshot of renderer window." />
-                    </div>
-                </div>
-                <div class="column">
-                    <h2 class="title is-4">3D CPU Renderer (2020)</h2>
-                    <p class="subtitle is-6"><em>Pure C++</em> • <strong>Solo/Graphics Engineer</strong></p>
-                    <p>
-                        Developed purely in C++, drawing RGB values directly onto a screen buffer. 
-                    </p>
-                    <ul>
-                        <li><strong>Written from scratch</strong> using no framework or API</li>
-                        <li>Supports .asc models, multiple cameras, Phong and Gourard shading, UV mapping, anti-aliasing</li>
-                    </ul>
-                    <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> -->
-                </div>
-            </div>
-        </div>
-        <div class="box project">
-            <div class="columns is-vcentered">
-                <div class="column is-one-third">
-                    <div class="project-thumb">
-                        <video autoplay muted loop playsinline class="project-thumb-video">
-                                <source src="/assets/dev/death-tennis-clip-1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="column">
-                    <h2 class="title is-4">Death Tennis (2020)</h2>
-                    <p class="subtitle is-6"><em><i>Super Smash Bros.-like 2D Fighter</i></em> • <strong>Level Designer, Artist, Animator</strong></p>
-                    <p>
-                        This is a <strong><vi>Smash-like</i> fighting game</strong> that's equal parts competitive and hilarious, complete with <strong>satisfying movement</strong>, <strong>unique visuals</strong>, and <strong>innovative mechanics</strong>.
-                    </p>
-                    <ul>
-                        <li>Made in GameMaker Studio 2, programmed in <strong>GSL</strong></li>
-                        <li>I was the sole <strong>artist</strong>, <strong>animator</strong>, and <strong>level designer</strong></li>
-                    </ul>
-                    <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> -->
-                </div>
-            </div>
-        </div>
-        <div class="box project">
-            <div class="columns is-vcentered">
-                <div class="column is-one-third">
-                    <div class="project-thumb">
-                        <img class="project-thumb-image" src="/assets/dev/menu-app-1.png" alt="Screenshot of Menu App." />
-                    </div>
-                </div>
-                <div class="column">
-                    <h2 class="title is-4">Menu App (2020)</h2>
-                    <p class="subtitle is-6"><em>Where should we get lunch?</em> • <strong>Co-Founder, Full-Stack Engineer</strong></p>
-                    <p>
-                        A web application to allow you to decide which campus dining hall to go to <strong>as fast as possible</strong>.
-                    </p>
-                    <ul>
-                        <li>Front-end made in <strong>React</strong>.</li>
-                        <li>Back-end written in <strong>Python</strong> using <strong>Flask</strong></li>
-                    </ul>
-                    <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> -->
-                </div>
-            </div>
-        </div>
+            </div> 
+        ))}
     </div>
 </StandardPageLayout>
 
