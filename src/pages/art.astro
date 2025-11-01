@@ -27,10 +27,15 @@ const artworks = await getCollection("art");
 
 
 <style>
-  .page-art {
+  body {
     background-color: rgb(243, 247, 255);
     color: #222;
     padding: 2rem;
+  }
+
+  .page-art .navbar a,
+  .page-art .navbar-item {
+    color: black !important;
   }
 
   .gallery {
@@ -68,6 +73,7 @@ const artworks = await getCollection("art");
   .art-info h3 {
     margin: 0.5rem 0;
     font-size: 1.25rem;
+    color: #5c5c5c;
   }
 
   .art-info .year {
