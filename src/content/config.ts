@@ -6,6 +6,7 @@ const projects = defineCollection({
         year: z.string(),
         company: z.string().optional(),
         role: z.string().optional(),
+        genre: z.string().optional(),
         features: z.array(z.string()).optional(),
         mediaType: z.enum(["video", "image"]),
         mediaSrc: z.string(), // e.g. /assets/dev/bo7-trailer-clip-1.mp4
