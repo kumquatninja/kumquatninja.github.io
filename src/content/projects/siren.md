@@ -7,8 +7,8 @@ genre: "Lovecraftian Survival Horror"
 mediaType: "video"
 mediaSrc: "/assets/dev/siren-clip-1.mp4"
 features:
-  - Featured selection on IGN's coverage of USC Games Expo 2022
-  - Led a team of <strong>3 designers</strong> through successful milestones and ship
+  - I was the sole <strong>artist</strong> and <strong>animator</strong>
+  - Featuring <strong>time-travel</strong>, <strong>fish-eating mushrooms</strong>, and <strong>flashlights</strong>.
 ---
 
-A <strong>first-person survival-crafting</strong> game featuring complex <strong>enemy AI</strong>, <strong>stealth</strong>, <strong>non-linear design</strong>, and a <strong>gripping narrative</strong> about rescuing a loved-one lost among the clouds.
+An <strong>underwater</strong> <strong>survival-game</strong> that challenges players to escape the Siren's cave by understanding its complex rules and systems.
