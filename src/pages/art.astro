@@ -6,31 +6,24 @@ const pageTitle = "Art";
 const artworks = await getCollection("art");
 ---
 
-<StandardPageLayout pageTitle={pageTitle} class="page-art">
-    <section class="gallery">
-        {artworks.map((art) => (
-            <div class="art-card">
-                {art.data.mediaType === "image" ? (
-                    <img src={art.data.mediaSrc} alt={art.data.title} />
-                ) : (
-                    <video src={art.data.mediaSrc} autoplay muted loop playsinline></video>
-                )}
-                <div class="art-info">
-                    <h3>{art.data.title}</h3>
-                    {art.data.year && <p class="year">{art.data.year}</p>}
-                    {art.data.year && <p class="description">{art.data.description}</p>}
-                </div>
-            </div>
-        ))}
-    </section>
+<StandardPageLayout pageTitle={pageTitle} titleClass="art-title">
+  <section class="gallery">
+      {artworks.map((art) => (
+          <div class="art-card">
+              {art.data.mediaType === "image" ? (
+                  <img src={art.data.mediaSrc} alt={art.data.title} />
+              ) : (
+                  <video src={art.data.mediaSrc} autoplay muted loop playsinline></video>
+              )}
+          </div>
+      ))}
+  </section>
 </StandardPageLayout>
 
 
-<style>
+<style is:global>
   body {
     background-color: rgb(243, 247, 255);
-    color: #222;
-    padding: 2rem;
   }
 
   .page-art .navbar a,
@@ -53,9 +46,17 @@ const artworks = await getCollection("art");
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
+  .art-title {
+    color: black !important;
+  }
+
+  .navbar-item {
+    color: black !important;
+  }
+
   .art-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transform: scale(1.01);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
   }
 
   .art-card img,
@@ -63,21 +64,5 @@ const artworks = await getCollection("art");
     width: 100%;
     height: auto;
     display: block;
-  }
-
-  .art-info {
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .art-info h3 {
-    margin: 0.5rem 0;
-    font-size: 1.25rem;
-    color: #5c5c5c;
-  }
-
-  .art-info .year {
-    font-size: 0.9rem;
-    color: #777;
   }
 </style>
