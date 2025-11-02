@@ -2,12 +2,12 @@
 import StandardPageLayout from "../layouts/StandardPageLayout.astro";
 const pageTitle = "About Me";
 ---
-<StandardPageLayout pageTitle={pageTitle} class="about-title">
+<StandardPageLayout pageTitle={pageTitle}>
     <div class="about-section">
         <p>
             I'm a <strong>game designer</strong> currently working on the <i>Call of Duty&reg;: Black Ops</i> series of video games as well as an indie stealth-action game.
             <br/><br/>
-            I'm obsessed with discovering truth in design, and making the best entertainment of all time, which my multidisciplinary background in science and art has aided me in pursuing.
+            I'm obsessed with discovering truth in design and focused on making the best entertainment in the world, which my multidisciplinary background in science and art has aided me in pursuing.
             <br/><br/>
             I currently reside in Los Angeles, California.
         </p>
@@ -45,7 +45,7 @@ const pageTitle = "About Me";
     </div>
 </StandardPageLayout>
 
-<style>
+<style is:global>
     body {
         background-color: rgb(186, 235, 186);
         color: black;
@@ -66,19 +66,15 @@ const pageTitle = "About Me";
         transform: translate(-2px, -2px);
     }
 
-    .about-title {
+    .title {
+        color: rgb(65, 65, 65) !important;
+    }
+
+    strong {
         color: black !important;
     }
 
-    em {
-        color: black;
-    }
-
-    .about-title {
-        color: rgb(221, 5, 5);
-    }
-
-    .title {
-        color: rgb(84, 77, 187);
+    h3 {
+        color: rgb(84, 77, 187) !important;
     }
 </style>
