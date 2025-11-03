@@ -16,8 +16,10 @@
         const target = el.dataset.target;
         const $target = document.getElementById(target);
 
-        el.classLyist.toggle('is-active');
-        $target?.classList.toggle('is-active');
+        el.classList.toggle('is-active');
+        if ($target) {
+            $target.classList.toggle('is-active');
+        }
 
         });
     });
