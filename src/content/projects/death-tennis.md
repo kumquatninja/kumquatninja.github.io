@@ -7,7 +7,7 @@ genre: "Super Smash Bros.-like 2D Fighter"
 mediaType: "video"
 mediaSrc: "/assets/dev/death-tennis-clip-1.mp4"
 features:
-  - Made in GameMaker Studio 2, programmed in <strong>GSL</strong>
+  - Made in GameMaker Studio 2, programmed in <strong>GML</strong>
   - I was the sole <strong>artist</strong>, <strong>animator</strong>, and <strong>level designer</strong>
 ---
 
