@@ -61,7 +61,6 @@ projects.sort((a, b) => {
 <style>
     body {
         background-color: rgb(229, 186, 235);
-        color: black;
     }
 
     .portfolio-container {
@@ -72,6 +71,7 @@ projects.sort((a, b) => {
     .box {
         filter: drop-shadow(10px 10px 0px #984eaa);
         transition: transform 0.2s ease, filter 0.2s ease;
+        color: var(--secondary-content-color);
     }
 
     .box:hover {
@@ -96,5 +96,17 @@ projects.sort((a, b) => {
         height: 100%;
         object-fit: cover;
         border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .title {
+        color: var(--primary-content-color);
+    }
+
+    strong {
+        color: var(--primary-content-color);
+    }
+
+    .subtitle {
+        color: var(--secondary-content-color);
     }
 </style>
