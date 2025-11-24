@@ -8,7 +8,7 @@ genre: "Indie Stealth-Action"
 mediaType: "video"
 mediaSrc: "/assets/dev/hh-clip-1.mp4"
 features:
-    - Stealth and AI systems using modular architecture
+    - Clear stealth and dynamic AI systems
     - Extensible and highly maintainable architecture
 ---
 
