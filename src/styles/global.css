@@ -10,12 +10,14 @@
 
 .navbar {
       background: transparent;
-      position: absolute;
+      position: relative;
       width: 100%;
       top: 0;
+      margin: auto;
+      max-width: 1280px;
 }
 
-.navbar-item {
+.navbar-item, .navbar-link {
     background-color: transparent !important;
     color: white;
 }
@@ -25,7 +27,6 @@
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 
 @media screen and (max-width: 1023px) {
     .navbar-menu {
