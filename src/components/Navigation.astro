@@ -31,7 +31,7 @@ projects.sort((a, b) => {
                 <a class="navbar-link" href="/dev/">Projects</a>
                 <div class="navbar-dropdown is-boxed">
                     {projects.map((proj) => (
-                        <a class="navbar-item" href="/">{proj.data.title} ({proj.data.year})</a>
+                        <a class="navbar-item" href={`/projects/${proj.slug}`}>{proj.data.title}</a>
                     ))}
                 </div>
             </div> -->
