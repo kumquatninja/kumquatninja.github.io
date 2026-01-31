@@ -1,4 +1,6 @@
 ---
+import Project from "../components/Project.astro"
+
 import { getCollection } from "astro:content";
 import StandardPageLayout from "../layouts/StandardPageLayout.astro";
 
@@ -22,38 +24,7 @@ projects.sort((a, b) => {
 <StandardPageLayout pageTitle={pageTitle}>
     <div class ="portfolio-container">
         {projects.map((proj) => (
-            <div class="box project">
-                <div class="columns is-vcentered">
-                    <div class="column is-one-third">
-                        <div class="project-thumb">
-                            {proj.data.mediaType === "video" ? (
-                                <video autoplay muted loop playsinline class="project-thumb-video">
-                                        <source src={proj.data.mediaSrc} type="video/mp4" />
-                                </video>
-                            ) : (
-                                <img src={proj.data.mediaSrc} class="project-thumb-image" />
-                            )}
-                        </div>
-                    </div>
-                    <div class="column">
-                        <h2 class="title is-4">{proj.data.title} ({proj.data.year})</h2>
-                        <p class="subtitle is-6">
-                            {proj.data.company ? `${proj.data.company} • ` : ""}
-                            {proj.data.genre ? <em>{proj.data.genre}</em> : ""}
-                            <strong>
-                                {proj.data.role ? ` • ${proj.data.role}` : ""}
-                            </strong>
-                        </p>
-                        {proj.data.summary && <p set:html={proj.data.summary} />}
-                        {proj.data.features && (
-                            <ul>
-                                {proj.data.features?.map((feature) => <li set:html={feature}></li>)}
-                            </ul>
-                        )}
-                        {/* <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> --> */}
-                    </div>
-                </div>
-            </div> 
+            <Project id={proj.slug}/>
         ))}
     </div>
 </StandardPageLayout>
@@ -66,47 +37,5 @@ projects.sort((a, b) => {
     .portfolio-container {
         max-width: 900px;
         margin: 0 auto;
-    }
-
-    .box {
-        filter: drop-shadow(10px 10px 0px #984eaa);
-        transition: transform 0.2s ease, filter 0.2s ease;
-        color: var(--secondary-content-color);
-    }
-
-    .box:hover {
-        transform: translate(-2px, -4px);
-        filter: drop-shadow(11px 16px 0px #984eaa);
-    }
-
-    .project-thumb {
-        aspect-ratio: 3 / 2;
-        overflow: hidden;
-    }
-
-    .project-thumb-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 0.5rem 0 0 0.5rem;
-    }
-
-    .project-thumb-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 0.5rem 0 0 0.5rem;
-    }
-
-    .title {
-        color: var(--primary-content-color);
-    }
-
-    strong {
-        color: var(--primary-content-color);
-    }
-
-    .subtitle {
-        color: var(--secondary-content-color);
     }
 </style>
