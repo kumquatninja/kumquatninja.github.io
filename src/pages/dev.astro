@@ -44,7 +44,7 @@ projects.sort((a, b) => {
                                 {proj.data.role ? ` • ${proj.data.role}` : ""}
                             </strong>
                         </p>
-                        {proj.body && <p set:html={proj.body} />}
+                        {proj.data.summary && <p set:html={proj.data.summary} />}
                         {proj.data.features && (
                             <ul>
                                 {proj.data.features?.map((feature) => <li set:html={feature}></li>)}

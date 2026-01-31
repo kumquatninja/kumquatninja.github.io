@@ -9,6 +9,5 @@ mediaSrc: "/assets/dev/siren-clip-1.mp4"
 features:
   - I was the sole <strong>artist</strong> and <strong>animator</strong>
   - Features <strong>time-travel</strong>, <strong>fish-eating mushrooms</strong>, and <strong>flashlights</strong>
+summary: An <strong>underwater</strong> <strong>survival-game</strong> that challenges players to escape the Siren's cave by understanding its complex rules and systems.
 ---
-
-An <strong>underwater</strong> <strong>survival-game</strong> that challenges players to escape the Siren's cave by understanding its complex rules and systems.

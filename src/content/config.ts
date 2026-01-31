@@ -9,6 +9,7 @@ const projects = defineCollection({
         role: z.string().optional(),
         genre: z.string().optional(),
         features: z.array(z.string()).optional(),
+        summary: z.string().optional(),
         mediaType: z.enum(["video", "image"]),
         mediaSrc: z.string(), // e.g. /assets/dev/bo7-trailer-clip-1.mp4
     }),
