@@ -6,39 +6,45 @@ const proj = await getEntry('projects', id);
 ---
 
 <div class="box project">
-    <div class="columns is-vcentered">
-        <div class="column is-one-third">
-            <div class="project-thumb">
-                {proj && proj.data.mediaType === "video" ? (
-                    <video autoplay muted loop playsinline class="project-thumb-video">
-                            <source src={proj.data.mediaSrc} type="video/mp4" />
-                    </video>
-                ) : (
-                    <img src={proj && proj.data.mediaSrc} class="project-thumb-image" />
+    <!-- <a href={`../projects/${proj && proj.slug}/`}> -->
+        <div class="columns is-vcentered">
+            <div class="column is-one-third">
+                <div class="project-thumb">
+                    {proj && proj.data.mediaType === "video" ? (
+                        <video autoplay muted loop playsinline class="project-thumb-video">
+                                <source src={proj.data.mediaSrc} type="video/mp4" />
+                        </video>
+                    ) : (
+                        <img src={proj && proj.data.mediaSrc} class="project-thumb-image" />
+                    )}
+                </div>
+            </div>
+            <div class="column">
+                <h2 class="title is-4">{proj && proj.data.title} ({proj && proj.data.year})</h2>
+                <p class="subtitle is-6">
+                    <strong>
+                    {proj && proj.data.role ? `${proj.data.role} •` : ""}
+                    </strong>
+                    {proj && proj.data.company ? `${proj.data.company} • ` : ""}
+                    {proj && proj.data.genre ? <em>{proj && proj.data.genre}</em> : ""}
+                </p>
+                {proj && proj.data.summary && <p set:html={proj.data.summary} />}
+                {proj && proj.data.features && (
+                    <ul>
+                        {proj.data.features?.map((feature) => <li set:html={feature}></li>)}
+                    </ul>
                 )}
+                {/* <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> --> */}
             </div>
         </div>
-        <div class="column">
-            <h2 class="title is-4">{proj && proj.data.title} ({proj && proj.data.year})</h2>
-            <p class="subtitle is-6">
-                {proj && proj.data.company ? `${proj.data.company} • ` : ""}
-                {proj && proj.data.genre ? <em>{proj && proj.data.genre}</em> : ""}
-                <strong>
-                    {proj && proj.data.role ? ` • ${proj.data.role}` : ""}
-                </strong>
-            </p>
-            {proj && proj.data.summary && <p set:html={proj.data.summary} />}
-            {proj && proj.data.features && (
-                <ul>
-                    {proj.data.features?.map((feature) => <li set:html={feature}></li>)}
-                </ul>
-            )}
-            {/* <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> --> */}
-        </div>
-    </div>
+    <!-- </a> -->
 </div>
 
 <style>
+    a {
+        color: inherit;
+    }
+
     .box {
         filter: drop-shadow(10px 10px 0px #984eaa);
         transition: transform 0.2s ease, filter 0.2s ease;
