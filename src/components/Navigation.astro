@@ -1,5 +1,21 @@
 ---
 import Hamburger from "./Hamburger.astro"
+import { getCollection } from "astro:content";
+
+const projects = await getCollection('projects');
+
+projects.sort((a, b) => {
+    const aSort = a.data.sort ?? null;
+    const bSort = b.data.sort ?? null;
+
+    if (aSort !== null && bSort !== null) return aSort - bSort;
+    if (aSort !== null) return -1
+    if (bSort !== null) return 1
+
+    const yearA = a.data.year === "TBA" ? 0 : Number(a.data.year);
+    const yearB = b.data.year === "TBA" ? 0 : Number(b.data.year);
+    return yearB - yearA;
+});
 ---
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -11,10 +27,16 @@ import Hamburger from "./Hamburger.astro"
     </div>
     <div class="navbar-menu is-justify-content-center is-size-5 has-text-weight-bold is-uppercase" id="navMenu">
         <div class="navbar-end">
-            <a class="navbar-item" href="/"><b></b>Home</a>
-            <a class="navbar-item" href="/dev/">Dev</a>
+            <!-- <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="/dev/">Projects</a>
+                <div class="navbar-dropdown is-boxed">
+                    {projects.map((proj) => (
+                        <a class="navbar-item" href="/">{proj.data.title} ({proj.data.year})</a>
+                    ))}
+                </div>
+            </div> -->
+            <a class="navbar-item" href="/dev/">Projects</a>
             <a class="navbar-item" href="/art/">Art</a>
-            <!-- <a class="navbar-item" href="/">Blog</a> -->
             <a class="navbar-item" href="/about/">About</a>
         </div>
     </div>
