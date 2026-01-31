@@ -1,0 +1,42 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+---
+<BaseLayout pageTitle={frontmatter.title}>
+  <section class="container content section">
+      <h1 class="title is-3">{frontmatter.title} ({frontmatter.year})</h1>
+      <h2 class="subtitle is-4">
+        {frontmatter.role ? frontmatter.role : ""} {frontmatter.company ? `• ${frontmatter.company}` : ""}
+      </h2>
+      {frontmatter && frontmatter.mediaType === "video" ? (
+        <video autoplay muted loop playsinline class="project-thumb-video">
+          <source src={frontmatter.mediaSrc} type="video/mp4" />
+        </video>
+        ) : (
+        <img src={frontmatter && frontmatter.mediaSrc} class="project-thumb-image" />
+        )}
+        <p>
+          {frontmatter.features && (
+              <ul>
+                  {frontmatter.features?.map((feature) => <li set:html={feature}></li>)}
+              </ul>
+          )}
+        </p>
+        <slot />
+  </section>
+</BaseLayout>
+
+<style>
+  body {
+    /* background-color: rgb(229, 186, 235); */
+  }
+
+  img {
+    border-radius: 1rem 1rem 1rem 1rem;
+    height: 50%  }
+
+  video {
+    border-radius: 1rem 1rem 1rem 1rem;
+    max-height: 30rem;
+  }
+</style>
