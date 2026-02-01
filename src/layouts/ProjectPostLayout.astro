@@ -4,7 +4,12 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
   <section class="container content section">
-      <h1 class="title is-3">{frontmatter.title} ({frontmatter.year})</h1>
+      <h1 class="title is-3">
+      <a href="/projects/">
+        <svg class="back-button" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 0H5L0 5L5 10H6V6H12V15H14V4H6V0Z" fill="#000000"></path> </g></svg></svg>
+      </a>
+        {frontmatter.title} ({frontmatter.year})
+      </h1>
       <h2 class="subtitle is-4">
         {frontmatter.role ? frontmatter.role : ""} {frontmatter.company ? `• ${frontmatter.company}` : ""}
       </h2>
@@ -38,5 +43,10 @@ const { frontmatter } = Astro.props;
   video {
     border-radius: 1rem 1rem 1rem 1rem;
     max-height: 30rem;
+  }
+
+  .back-button {
+    width: 0.9em;
+    color: white;
   }
 </style>

@@ -6,7 +6,7 @@ const proj = await getEntry('projects', id);
 ---
 
 <div class="box project">
-    <!-- <a href={`../projects/${proj && proj.slug}/`}> -->
+    <a href={`../projects/${proj && proj.slug}/`}>
         <div class="columns is-vcentered">
             <div class="column is-one-third">
                 <div class="project-thumb">
@@ -37,7 +37,7 @@ const proj = await getEntry('projects', id);
                 {/* <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> --> */}
             </div>
         </div>
-    <!-- </a> -->
+    </a>
 </div>
 
 <style>
