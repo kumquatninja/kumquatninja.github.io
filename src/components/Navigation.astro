@@ -1,6 +1,7 @@
 ---
-import Hamburger from "./Hamburger.astro"
+import Hamburger from './Hamburger.astro'
 import { getCollection } from "astro:content";
+import SocialIcon from './SocialIcon.astro';
 
 const projects = await getCollection('projects');
 
@@ -41,7 +42,7 @@ projects.sort((a, b) => {
             <a class="navbar-item" href="https://sparkling-pram-e4d.notion.site/Media-Journal-0222ff3407544d5e9103df9b115ddd8e?source=copy_link" target="_blank">Media Log⤴</a>
             <a class="navbar-item" href="/about/">About</a>
         </div>
+        <SocialIcon platform="github" href="https://www.github.com/kumquatninja" />
+        <SocialIcon platform="bluesky" href="https://bsky.app/profile/parwesh.bsky.social" />
     </div>
 </nav>
-
-

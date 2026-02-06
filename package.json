@@ -9,7 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@iconify-json/simple-icons": "^1.2.69",
     "astro": "^5.15.9",
+    "astro-icon": "^1.1.5",
     "bulma": "^1.0.4"
   }
 }
