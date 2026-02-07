@@ -28,6 +28,12 @@ projects.sort((a, b) => {
     </div>
     <div class="navbar-menu is-justify-content-center is-size-5 has-text-weight-bold is-uppercase" id="navMenu">
         <div class="navbar-end">
+            <a href="https://www.github.com/kumquatninja" class="navbar-item social-link" target="_blank" rel="noopener noreferrer">
+                <SocialIcon platform="github" />
+            </a>
+            <a href="https://bsky.app/profile/parwesh.bsky.social" class="navbar-item social-link" target="_blank" rel="noopener noreferrer">
+                <SocialIcon platform="bluesky" />
+            </a>
             <!-- <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link" href="/dev/">Projects</a>
                 <div class="navbar-dropdown is-boxed">
@@ -42,7 +48,26 @@ projects.sort((a, b) => {
             <a class="navbar-item" href="https://sparkling-pram-e4d.notion.site/Media-Journal-0222ff3407544d5e9103df9b115ddd8e?source=copy_link" target="_blank">Media Log⤴</a>
             <a class="navbar-item" href="/about/">About</a>
         </div>
-        <SocialIcon platform="github" href="https://www.github.com/kumquatninja" />
-        <SocialIcon platform="bluesky" href="https://bsky.app/profile/parwesh.bsky.social" />
     </div>
 </nav>
+
+<style>
+    .navbar {
+        background: transparent;
+        position: relative;
+        width: 100%;
+        top: 0;
+        margin: auto;
+        max-width: 1280px;
+    }
+
+    .navbar-item, .navbar-link  {
+        background-color: transparent !important;
+        color: var(--primary-content-color)
+    }
+
+    
+    .navbar-item:hover {
+        color: var(--hover-color);
+    }
+</style>

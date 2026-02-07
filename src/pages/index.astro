@@ -33,6 +33,10 @@ const pageTitle = "Parwesh"
 </html>
 
 <style>
+	:root {
+		--bg: transparent;
+	}
+
 	.background-video {
 		position: absolute;
 		top: 0;
@@ -58,7 +62,7 @@ const pageTitle = "Parwesh"
 		content: "";
 		position: absolute;
 		inset: 0;
-		background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+		background: rgba(0, 0, 0, 0.4);
 		z-index: 1;
     }
 
@@ -72,7 +76,7 @@ const pageTitle = "Parwesh"
 	.hero .subtitle,
 	.hero p
 	{
-		color: white;
+		color: var(--primary-content-color); /*white;*/
 		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 	}
 </style>

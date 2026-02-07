@@ -1,31 +1,17 @@
 :root {
+    --bg: var(--bulma-body-background-color);
+    --hover-color: rgb(0, 204, 255);
     --primary-content-color: #ebecf0;
     --secondary-content-color: #abb1bf;
     --bulma-strong-color: var(--primary-content-color); 
 }
 
+body {
+    background-color: var(--bg);
+}
+
 .title {
     color: var(--primary-content-color);
-}
-
-.navbar {
-      background: transparent;
-      position: relative;
-      width: 100%;
-      top: 0;
-      margin: auto;
-      max-width: 1280px;
-}
-
-.navbar-item, .navbar-link {
-    background-color: transparent !important;
-    color: white;
-}
-
-.navbar-item:hover {
-    background-color: transparent !important;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 1023px) {
