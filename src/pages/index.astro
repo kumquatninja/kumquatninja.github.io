@@ -3,80 +3,85 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Parwesh"
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<section class="hero is-fullheight-with-navbar level">
-		<video autoplay muted loop playsinline class="background-video" id="reel">
+  	<section class="hero is-fullheight-with-navbar level hero-with-bg">
+		<video autoplay muted loop playsinline class="hero-video">
 			<source type="video/mp4" src="/reel2_small.mp4" />
 		</video>
 
-		<div class="container hero-body level-left">
+		<div class="hero-overlay"></div>
+
+		<div class="container hero-body">
 			<div class="level-item">
-				<img src="/kn-logo.png" alt="Kumquat Ninja logo" width=200rem />
+				<img src="/kn-logo.png" alt="Kumquat Ninja logo" width="200" />
 			</div>
+
 			<div class="level-item">
 				<div>
-					<p class="title">Parwesh Rallapalli</p>
-					<p class="subtitle">
-						Game Designer <strong><a href="https://treyarch.com" target="_blank">@Treyarch</a></strong>
-					</p>
-					<p>Currently working on <a href="https://www.callofduty.com/blackops7" target="_blank">
-						<em><nobr>Call of Duty&#174;: Black Ops 7</nobr></em></a> and an <em>indie stealth-action game</em>.
-					</p>
-					<div class="buttons mt-4">
-						<a class="button is-primary" href="/projects/">View My Work</a>
-						<a class="buton is-light" href="mailto:parweshrallapalli@gmail.com">Get In Touch</a>
-					</div>
+				<p class="title">Parwesh Rallapalli</p>
+				<p class="subtitle">
+					Game Designer <strong><a href="https://treyarch.com" target="_blank">@Treyarch</a></strong>
+				</p>
+				<p>
+					Currently working on
+					<a href="https://www.callofduty.com/blackops7" target="_blank">
+						<em><nobr>Call of Duty®: Black Ops 7</nobr></em>
+					</a>
+					and an <em>indie stealth-action game</em>.
+				</p>
+
+				<div class="buttons mt-4">
+					<a class="button is-primary" href="/projects/">View My Work</a>
+					<a class="button is-light" href="mailto:parweshrallapalli@gmail.com">Get In Touch</a>
 				</div>
 			</div>
 		</div>
-	</section>
+ 	</section>
 </BaseLayout>
-</html>
 
-<style>
+<style is:global>
 	:root {
 		--bg: transparent;
 	}
 
-	.background-video {
+	.navbar {
 		position: absolute;
 		top: 0;
-		left: 0;
+		width: 100%;
+		z-index: 10;
+		background: transparent;
+	}
+
+	.hero-with-bg {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero-with-bg .hero-video {
+		position: absolute;
+		inset: 0;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		z-index: -1;
+		z-index: 0;
 	}
 
-	img {
-		-webkit-filter: drop-shadow(5px 5px 8px #22222271);
-		filter: drop-shadow(5px 5px 8px #22222271); 
-	}
-
-	.hero {
-		display: flex;
-		align-items: flex-start;
-		padding-top: 5rem;
-	}
-
-	.hero::before {
-		content: "";
+	.hero-with-bg .hero-overlay {
 		position: absolute;
 		inset: 0;
-		background: rgba(0, 0, 0, 0.4);
+		background: rgba(0, 0, 0, 0.5);
 		z-index: 1;
-    }
+		pointer-events: none;
+	}
 
-    .hero-body {
+	.hero-with-bg .hero-body {
 		position: relative;
 		z-index: 2;
-		max-width: 600px;
-    }
+	}
 
 	.hero .title,
 	.hero .subtitle,
-	.hero p
-	{
-		color: var(--primary-content-color); /*white;*/
-		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+	.hero p {
+		color: var(--primary-content-color);
+		text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
 	}
 </style>
