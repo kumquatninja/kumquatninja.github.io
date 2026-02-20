@@ -1,5 +1,5 @@
 :root {
-    --bg: var(--bulma-body-background-color);
+    --bg: #14161a;
     --hover-color: rgb(0, 204, 255);
     --primary-content-color: #ebecf0;
     --secondary-content-color: #abb1bf;
