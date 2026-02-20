@@ -3,7 +3,12 @@
     --hover-color: rgb(0, 204, 255);
     --primary-content-color: #ebecf0;
     --secondary-content-color: #abb1bf;
-    --bulma-strong-color: var(--primary-content-color); 
+    --bulma-strong-color: var(--primary-content-color);
+    --navbar-background-color: #14161a;
+}
+
+header {
+    background-color: var(--navbar-background-color);
 }
 
 body {
