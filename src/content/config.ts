@@ -11,7 +11,8 @@ const projects = defineCollection({
         features: z.array(z.string()).optional(),
         summary: z.string().optional(),
         mediaType: z.enum(["video", "image"]),
-        mediaSrc: z.string(), // e.g. /assets/dev/bo7-trailer-clip-1.mp4
+        mediaSrc: z.string(),
+        logoSrc: z.string().optional(),
     }),
 });
 
