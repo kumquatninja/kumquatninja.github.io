@@ -14,6 +14,8 @@ features:
 summary: A fast-paced <strong>stealth</strong> game inspired by <em>Metal Gear Solid</em>, <em>Hotline Miami</em>, and <em>Sly Cooper</em> featuring <strong>bespoke UI systems</strong>, <strong>clean architecture</strong> and <strong>reactive guard behaviors</strong>.
 ---
 <p>
-    <a href="https://heartheistgame.com" target="_blank">Press Kit</a>
+    <a href="https://heartheistgame.com" target="_blank">
+        <button class="button">Press Kit ⤴</button>
+    </a>
 </p>
 <img src="/assets/art/hh-shopkeeper-concept-1.jpeg" width="400" alt="Shopkeeper Concept Art">
