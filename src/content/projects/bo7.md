@@ -29,7 +29,7 @@ I shipped *Black Ops 7* only one year after the previous entry, *Black Ops 6* (2
 - **S.P.E.C.I.A.L. Mayhem** (S1.5) -- *Design*
 - **Safeguard** (S2) -- *Design*
 - **Infected** (S2.5) -- *Design*
-- **Gauntlet** -- *Design*
+- **Gauntlet** (S2.5) -- *Design*
 - ...and more to be announced!
 
 # Game Mode and Player Spawning Setups
@@ -45,12 +45,10 @@ For each of the following maps, I set up all **12+ game modes**, positioned **hu
 ## **Imprint** (Launch)
 <img src="https://dfpiiufxcciujugzjvgx.supabase.co/storage/v1/object/public/uploaded_files/posts/IMPRINT%20HP-1763077897006.webp" alt="drawing" width=33%/>
 
+## **Odysseus** (S1)
+
 ## **Torment** (S2)
 <!-- <img src="https://dfpiiufxcciujugzjvgx.supabase.co/storage/v1/object/public/uploaded_files/posts/IMPRINT%20HP-1763077897006.webp" alt="drawing" width=33%/> -->
-
-## **Odysseus** (S2)
-
-## **Torque**
 
 # Interactive Environments
 - Programming for **moving bullet train** map hazard on *Express* (another train!)
@@ -62,4 +60,4 @@ For each of the following maps, I set up all **12+ game modes**, positioned **hu
 
 # Player Spawning
 - Part of core cross-studio gameplay domain responsible for improving, maintaining, and implementing our player spawning systems.
-- Worked with senior game designer on improvements to player spawning.
+- Worked with senior game designer to achieve signifact improvements to player spawning.
