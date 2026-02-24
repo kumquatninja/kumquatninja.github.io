@@ -6,7 +6,7 @@ const proj = await getEntry('projects', id);
 ---
 
 <div class="box project">
-    <!-- <a href={`../projects/${proj && proj.slug}/`}> -->
+    <a href={`../projects/${proj && proj.slug}/`}>
         <div class="columns is-vcentered">
             <div class="column is-one-third">
                 <div class="project-thumb">
@@ -16,6 +16,14 @@ const proj = await getEntry('projects', id);
                         </video>
                     ) : (
                         <img src={proj && proj.data.mediaSrc} class="project-thumb-image" />
+                    )}
+                    {proj && proj.data.logoSrc ? (
+                        <div class="project-logo-container">
+                            <div class="project-logo-overlay"></div>
+                            <img src={proj && proj.data.logoSrc} class="project-logo-image" />
+                        </div>
+                    ) : (
+                        ""
                     )}
                 </div>
             </div>
@@ -37,7 +45,7 @@ const proj = await getEntry('projects', id);
                 {/* <!-- <a href="/heart-heist" class="button is-primary mt-3">Read More</a> --> */}
             </div>
         </div>
-    <!-- </a> -->
+    </a>
 </div>
 
 <style>
@@ -56,9 +64,51 @@ const proj = await getEntry('projects', id);
         filter: drop-shadow(11px 16px 0px #984eaa);
     }
 
+    .box:hover .project-logo-image {
+        filter: opacity(0);
+    }
+
+    .box:hover .project-logo-overlay {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .project-logo-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.178);
+    }
+
+    .project-logo-overlay {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.089);
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+    }
+
     .project-thumb {
         aspect-ratio: 3 / 2;
+        z-index: 1;
         overflow: hidden;
+        position: relative;
+    }
+
+    .project-logo-image {
+        position: relative;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 3;
+        display: block;
+        width: 80%;
+        top: -65%;
+        transition: transform 0.2s ease, filter 0.2s ease;
+        left: 10%;
+    }
+
+    .project-logo-image.box:hover {
+        
     }
 
     .project-thumb-video {

@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
   <section class="container content section">
       <h1 class="title is-3">
       <a href="/projects/">
-        <svg class="back-button" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 0H5L0 5L5 10H6V6H12V15H14V4H6V0Z" fill="#000000"></path> </g></svg></svg>
+        <svg class="back-button" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 0H5L0 5L5 10H6V6H12V15H14V4H6V0Z" fill="#ffffff"></path> </g></svg></svg>
       </a>
         {frontmatter.title} ({frontmatter.year})
       </h1>
@@ -20,14 +20,16 @@ const { frontmatter } = Astro.props;
         ) : (
         <img src={frontmatter && frontmatter.mediaSrc} class="project-thumb-image" />
         )}
-        <p>
-          {frontmatter.features && (
-              <ul>
-                  {frontmatter.features?.map((feature) => <li set:html={feature}></li>)}
-              </ul>
-          )}
-        </p>
-        <slot />
+        <br />
+      <h1>Overview</h1>
+      <p>
+        {frontmatter.features && (
+            <ul>
+                {frontmatter.features?.map((feature) => <li set:html={feature}></li>)}
+            </ul>
+        )}
+      </p>
+      <slot />
   </section>
 </BaseLayout>
 
@@ -46,7 +48,7 @@ const { frontmatter } = Astro.props;
   }
 
   .back-button {
-    width: 0.9em;
+    width: 0.8em;
     color: white;
   }
 </style>
