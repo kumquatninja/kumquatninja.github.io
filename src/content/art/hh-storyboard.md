@@ -2,5 +2,5 @@
 title: "Storyboard"
 mediaType: "image"
 mediaSrc: "/assets/art/storyboard.png"
-year: "2019"
+pubDate: 2019-06-01
 ---

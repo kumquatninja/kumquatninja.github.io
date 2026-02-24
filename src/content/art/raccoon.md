@@ -2,5 +2,5 @@
 title: "Raccoon"
 mediaType: "image"
 mediaSrc: "/assets/art/coon.jpg"
-year: "2019"
+pubDate: 2019-05-01
 ---

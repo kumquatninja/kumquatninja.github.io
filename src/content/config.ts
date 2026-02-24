@@ -19,7 +19,7 @@ const projects = defineCollection({
 const art = defineCollection({
     schema: z.object({
         title: z.string(),
-        year: z.string().optional(),
+        pubDate: z.date(),
         mediaType: z.enum(["image", "video"]),
         mediaSrc: z.string(),
         description: z.string().optional(),

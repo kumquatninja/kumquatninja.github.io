@@ -2,5 +2,5 @@
 title: "Bike"
 mediaType: "image"
 mediaSrc: "/assets/art/bike.jpg"
-year: "2014"
+pubDate: 2014-02-01
 ---

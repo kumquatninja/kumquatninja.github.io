@@ -3,7 +3,11 @@ import { getCollection } from "astro:content";
 import StandardPageLayout from "../layouts/StandardPageLayout.astro";
 
 const pageTitle = "Art";
-const artworks = await getCollection("art");
+
+const allArtworks = await getCollection("art");
+const artworks = allArtworks.sort((a, b) => {
+	return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+})
 ---
 
 <StandardPageLayout pageTitle={pageTitle} titleClass="art-title">

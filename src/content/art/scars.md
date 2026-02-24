@@ -2,5 +2,5 @@
 title: "Scars"
 mediaType: "image"
 mediaSrc: "/assets/art/scars.jpg"
-year: "2014"
+pubDate: 2014-10-01
 ---
