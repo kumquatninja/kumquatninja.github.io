@@ -11,12 +11,11 @@ const pageTitle = "Parwesh"
 		<div class="hero-overlay"></div>
 
 		<div class="container hero-body">
-			<div class="level-item">
+			<div class="level-item logo">
 				<img src="/kn-logo.png" alt="Kumquat Ninja logo" width="200" />
 			</div>
 
 			<div>
-				<div>
 				<p class="title">Parwesh Rallapalli</p>
 				<p class="subtitle">
 					Game Designer <strong><a href="https://treyarch.com" target="_blank">@Treyarch</a></strong>
@@ -26,7 +25,7 @@ const pageTitle = "Parwesh"
 					<a href="https://www.callofduty.com/blackops7" target="_blank">
 						<em><nobr>Call of Duty®: Black Ops 7</nobr></em>
 					</a>
-					and an <em>indie stealth-action game</em>.
+					and an <em>indie stealth-extraction game</em>.
 				</p>
 
 				<div class="buttons mt-4">
@@ -34,7 +33,6 @@ const pageTitle = "Parwesh"
 					<a class="button is-light" href="mailto:parweshrallapalli@gmail.com">Get In Touch</a>
 				</div>
 			</div>
-		</div>
  	</section>
 </BaseLayout>
 
@@ -83,5 +81,28 @@ const pageTitle = "Parwesh"
 	.hero p {
 		color: var(--primary-content-color);
 		text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+	}
+
+	@media screen and (max-width: 1023px) {
+		.logo {
+			margin-bottom: 2rem;
+		}
+
+		.logo img {
+			width: 10rem;
+		}
+
+		.hero-body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+		}
+
+		.buttons {
+			justify-content: center; /* This is the key for Bulma buttons */
+			display: flex;
+    	}
 	}
 </style>
