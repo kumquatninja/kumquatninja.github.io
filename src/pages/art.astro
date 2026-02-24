@@ -7,57 +7,144 @@ const artworks = await getCollection("art");
 ---
 
 <StandardPageLayout pageTitle={pageTitle} titleClass="art-title">
-  <section class="gallery">
-      {artworks.map((art) => (
-          <div class="art-card">
-              {art.data.mediaType === "image" ? (
-                  <img src={art.data.mediaSrc} alt={art.data.title} />
-              ) : (
-                  <video src={art.data.mediaSrc} autoplay muted loop playsinline></video>
-              )}
-          </div>
-      ))}
-  </section>
+  	<section class="gallery">
+		{artworks.map((art) => (
+		<div class="art-card">
+			<button 
+				class="js-modal-trigger" 
+				data-src={art.data.mediaSrc} 
+				data-type={art.data.mediaType}
+				data-title={art.data.title}
+			>
+			{art.data.mediaType === "image" ? (
+				<img src={art.data.mediaSrc} alt={art.data.title} loading="lazy"/>
+			) : (
+				<video src={art.data.mediaSrc} muted loop playsinline></video>
+			)}
+			</button>
+		</div>
+		))}
+  	</section>
+
+  	<div id="main-modal" class="modal">
+		<div class="modal-background"></div>
+		<div class="modal-content">
+			<div id="modal-container" class="image">
+				</div>
+			</div>
+		<button class="modal-close is-large" aria-label="close"></button>
+  	</div>
 </StandardPageLayout>
+
+<script>
+	const modal = document.getElementById('main-modal');
+	const container = document.getElementById('modal-container');
+	const triggers = document.querySelectorAll('.js-modal-trigger');
+	const closer = document.querySelector('.modal-close');
+	const bg = document.querySelector('.modal-background');
+
+  	function openModal(src, type, title) {
+		container.innerHTML = '';
+
+		if (type === 'image') {
+			const img = document.createElement('img');
+			img.src = src;
+			img.alt = title;
+			container.appendChild(img);
+		} else if (type === 'video') {
+			const video = document.createElement('video');
+			video.src = src;
+			video.controls = true;
+			video.autoplay = true;
+			container.appendChild(video);
+		}
+
+    modal.classList.add('is-active');
+    document.documentElement.style.overflow = 'hidden'; // Stop background scrolling
+ 	}
+
+  	function closeModal() {
+		modal.classList.remove('is-active');
+		container.innerHTML = ''; // Stop video audio if it's playing
+		document.documentElement.style.overflow = ''; 
+  	}
+
+
+  	triggers.forEach(trigger => {
+		trigger.addEventListener('click', () => {
+			const { src, type, title } = trigger.dataset;
+			openModal(src, type, title);
+		});
+  	});
+
+  	[closer, bg].forEach(el => el?.addEventListener('click', closeModal));
+
+  	document.addEventListener('keydown', (e) => {
+    	if (e.key === 'Escape') closeModal();
+  	});
+</script>
 
 
 <style is:global>
-  body {
-    background-color: rgb(243, 247, 255) !important;
-  }
+	body {
+		background-color: rgb(243, 247, 255) !important;
+	}
 
-  .title {
-    color: rgb(59, 59, 59) !important;
-  }
+	.title {
+		color: rgb(59, 59, 59) !important;
+	}
 
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-  }
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		justify-items: center;
+	}
 
-  .art-card {
-    background: white;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
+	.art-card {
+		width: 100%;
+		aspect-ratio: 1/1;
+		background: #eee;
+		border-radius: 1rem;
+		overflow: hidden;
+		display: flex;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
 
-  .art-title {
-    color: black !important;
-  }
+	.art-title {
+		color: black !important;
+	}
   
-  .art-card:hover {
-    transform: scale(1.01);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-  }
+	.art-card:hover {
+		transform: scale(1.05);
+		box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+	}
 
-  .art-card img,
-  .art-card video {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+	.art-card img,
+	.art-card video {
+		width: 100%;
+		height: 100%;
+		width: auto;
+		display: block;
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		inset: 0;
+		z-index: 40;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.modal.is-active {
+		display: flex;
+	}
+
+	.modal-background {
+		position: absolute;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
 </style>
