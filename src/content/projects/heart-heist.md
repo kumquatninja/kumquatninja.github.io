@@ -19,4 +19,6 @@ summary: A fast-paced <strong>stealth</strong> game inspired by <em>Metal Gear S
         <button class="button">Press Kit ⤴</button>
     </a>
 </p>
-<img src="/assets/art/hh-shopkeeper-concept-1.jpeg" width="400" alt="Shopkeeper Concept Art">
+<img src="/assets/art/hh-shopkeeper-concept-1.jpeg" width="400px" alt="Shopkeeper Concept Art">
+<img src="/assets/art/hh-concept-2.0.png" width="400px" alt="Heart Heist Main Character Concept Art">
+<img src="/assets/art/hh-sketch-1.jpg" width="400px" alt="Heart Heist Main Character Concept Art">
