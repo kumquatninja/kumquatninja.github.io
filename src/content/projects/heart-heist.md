@@ -6,7 +6,8 @@ company: Indie
 role: "Director, Writer, Artist, Animator, Programmer"
 genre: "Stealth-Extraction"
 mediaType: "video"
-mediaSrc: "/assets/dev/hh-clip-1.mp4"
+mediaSrc: "/assets/dev/heart-heist/hh-clip-1.mp4"
+logoSrc: "/assets/dev/heart-heist/title-1.png"
 # features:
 #     - Dynamic stealth gameplay and AI systems
 #     - Sticky progression loops 
